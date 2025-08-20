@@ -2,21 +2,44 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a; /* slate-900 */
+  --primary: #FF0000; /* violet-500 */
+  --primary-foreground: #ffffff;
+  --border: #e5e7eb; /* gray-200 */
+  --muted: #64748b; /* slate-500 */
+  --card: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #e5e7eb;
+  --primary: #FF0000; /* keep brand accent consistent */
+  --primary-foreground: #000000;
+  --border: #1f2937; /* gray-800 */
+  --muted: #9ca3af; /* gray-400 */
+  --card: #0f0f0f;
+}
+
+:root[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #FF0000;
+  --primary-foreground: #ffffff;
+  --border: #e5e7eb;
+  --muted: #64748b;
+  --card: #ffffff;
 }
 
 body {
