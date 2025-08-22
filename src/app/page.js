@@ -1,6 +1,9 @@
 import Link from "next/link";
 import LogosCarousel from "@/components/LogosCarousel";
 import Image from "next/image";
+import CitySearch from "@/components/HomePageCities";
+import HomePageServices from "@/components/HomePageServices";
+import HomePageBrands from "@/components/HomePageBrand";
 
 export default function Home() {
   return (
@@ -29,80 +32,104 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-2xl font-bold">Find Influencers in Your City</h2>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <CitySearch />
+      </section>
+
+      <section id="about" className="py-12 px-40">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold">About Us</h2>
+          <div className="w-16 h-1 bg-red-500 mx-auto mt-2"></div>
+        </div>
+
+        {/* About Content */}
+        <div className="grid gap-8 md:grid-cols-2 items-center">
+          {/* Text */}
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              The Influencer Network is a premium marketing agency specializing in
+              connecting brands with the perfect influencers to amplify their
+              message. With years of experience and a curated network of over
+              10,000 influencers across all platforms, we deliver campaigns that
+              drive real results.
+            </p>
+            <p>
+              Our team of marketing experts works closely with both brands and
+              influencers to create authentic partnerships that resonate with
+              audiences and deliver measurable ROI.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-6 text-center">
+            <div className="stat bg-white shadow-md rounded-xl p-4">
+              <h3 className="text-2xl font-bold text-red-600">10,000+</h3>
+              <p className="text-gray-600">Influencers</p>
+            </div>
+            <div className="stat bg-white shadow-md rounded-xl p-4">
+              <h3 className="text-2xl font-bold text-red-600">500+</h3>
+              <p className="text-gray-600">Brand Partnerships</p>
+            </div>
+            <div className="stat bg-white shadow-md rounded-xl p-4">
+              <h3 className="text-2xl font-bold text-red-600">50M+</h3>
+              <p className="text-gray-600">Audience Reach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <HomePageServices />
+      
+
+      <section id="influencers" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold">Our Influencer Network</h2>
+          <div className="w-16 h-1 bg-red-500 mx-auto mt-4"></div>
+        </div>
+
+        {/* Influencer Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
-            ["Delhi", "500+"],
-            ["Mumbai", "1000+"],
-            ["Bangalore", "800+"],
-            ["Patna", "1500+"],
-            ["Varanasi", "1500+"],
-            ["Ahmedabad", "250+"],
-            ["Chennai", "300+"],
-            ["Hyderabad", "350+"],
-            ["Jaipur", "200+"],
-            ["Kolkata", "400+"],
-            ["Lucknow", "500+"],
-            ["Indore", "200+"],
-          ].map(([city, count]) => (
-            <div key={city} className="w-1/2 sm:w-1/3 md:w-1/4 rounded-lg border border-border p-4">
-              <p className="text-sm text-muted">{city}</p>
-              <p className="text-xl font-semibold">{count} Influencers</p>
+            { title: "Lifestyle", count: "2,500+ influencers" },
+            { title: "Beauty", count: "1,800+ influencers" },
+            { title: "Fashion", count: "2,200+ influencers" },
+            { title: "Tech", count: "1,000+ influencers" },
+            { title: "Food", count: "1,500+ influencers" },
+            { title: "Fitness", count: "1,000+ influencers" },
+          ].map((cat, i) => (
+            <div
+              key={i}
+              className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition"
+            >
+              <h3 className="text-xl font-semibold">{cat.title}</h3>
+              <p className="text-gray-600 mt-2">{cat.count}</p>
             </div>
           ))}
         </div>
-        <div className="mt-6">
-          <Link href="/influencers" className="text-sm text-black underline">View More</Link>
-        </div>
-      </section>
 
-      <section className="bg-black text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 flex flex-col gap-10 sm:flex-row">
-          <div className="sm:flex-1">
-            <p className="text-3xl font-extrabold">10,000+</p>
-            <p className="text-white/70">Influencers</p>
+        {/* Platform Stats */}
+        <div className="flex justify-center gap-10">
+          <div className="text-center">
+            <i className="fab fa-instagram text-4xl text-pink-500"></i>
+            <h4 className="mt-2 text-lg font-medium">Instagram</h4>
           </div>
-          <div className="sm:flex-1">
-            <p className="text-3xl font-extrabold">500+</p>
-            <p className="text-white/70">Brand Partnerships</p>
+          <div className="text-center">
+            <i className="fab fa-youtube text-4xl text-red-600"></i>
+            <h4 className="mt-2 text-lg font-medium">YouTube</h4>
           </div>
-          <div className="sm:flex-1">
-            <p className="text-3xl font-extrabold">50M+</p>
-            <p className="text-white/70">Audience Reach</p>
+          <div className="text-center">
+            <i className="fab fa-twitter text-4xl text-sky-500"></i>
+            <h4 className="mt-2 text-lg font-medium">Twitter</h4>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 flex flex-col gap-10 md:flex-row">
-        <div className="space-y-4 md:w-1/2">
-          <h2 className="text-2xl font-bold">About Us</h2>
-          <p className="text-muted">
-            The Influencer Network is a premium marketing agency specializing in connecting brands with the perfect influencers to amplify their message.
-          </p>
-          <Link href="/about" className="text-sm underline">Learn more</Link>
-        </div>
-        <div className="space-y-4">
-          <h3 className="text-xl font-semibold">Our Services</h3>
-          <ul className="flex flex-col gap-2 text-foreground">
-            <li>Influencer Matching</li>
-            <li>Campaign Strategy</li>
-            <li>Content Creation</li>
-            <li>Campaign Management</li>
-            <li>Performance Analytics</li>
-            <li>Long-term Partnerships</li>
-          </ul>
-          <Link href="/services" className="text-sm underline">Explore services</Link>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 pb-16">
-        <h2 className="text-2xl font-bold">Trusted By Brands</h2>
-        <div className="mt-6 flex flex-wrap gap-4 text-sm text-muted">
-          {["PhysicsWallah", "V-Mart", "Cashify", "Decathlon", "Swiggy", "Zomato"].map((b) => (
-            <div key={b} className="w-1/2 sm:w-1/3 md:w-1/6 rounded border border-border p-3 text-center">{b}</div>
-          ))}
-        </div>
-      </section>
+      <HomePageBrands />
 
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <h2 className="text-2xl font-bold">Testimonials</h2>
