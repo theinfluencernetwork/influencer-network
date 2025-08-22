@@ -1,34 +1,46 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
-	const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("light");
+  const [mounted, setMounted] = useState(false);
 
-	useEffect(() => {
-		const saved = typeof window !== "undefined" ? localStorage.getItem("theme") : null;
-		const initial = saved || "light";
-		document.documentElement.setAttribute("data-theme", initial);
-		setTheme(initial);
-	}, []);
+  useEffect(() => {
+    setMounted(true);
+    const saved =
+      typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+    const initial = saved || "light";
+    document.documentElement.setAttribute("data-theme", initial);
+    setTheme(initial);
+  }, []);
 
-	function toggleTheme() {
-		const next = theme === "light" ? "dark" : "light";
-		document.documentElement.setAttribute("data-theme", next);
-		localStorage.setItem("theme", next);
-		setTheme(next);
-	}
+  function toggleTheme() {
+    const next = theme === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    setTheme(next);
+  }
 
-	return (
-		<button
-			aria-label="Toggle color theme"
-			onClick={toggleTheme}
-			className="inline-flex items-center gap-2 rounded border border-border px-3 py-1.5 text-sm hover:bg-black/5"
-		>
-			<span className="h-4 w-4 inline-block rounded-full"
-				style={{ backgroundColor: theme === "light" ? "#fbbf24" : "#0ea5e9" }}
-			/>
-			{theme === "light" ? "Dark" : "Light"} mode
-		</button>
-	);
+  if (!mounted) return null;
+
+  return (
+    <button
+      aria-label="Toggle color theme"
+      onClick={toggleTheme}
+      className="inline-flex items-center justify-center rounded-full p-2 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+    >
+      {theme === "light" ? (
+        <Moon
+          size={20}
+          className="text-gray-800 transition-transform duration-500 transform rotate-0 hover:rotate-12"
+        />
+      ) : (
+        <Sun
+          size={20}
+          className="text-yellow-400 transition-transform duration-500 transform rotate-0 hover:rotate-12"
+        />
+      )}
+    </button>
+  );
 }
-

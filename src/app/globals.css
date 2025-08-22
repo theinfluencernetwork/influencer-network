@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
+/* ----------------- Base Colors ----------------- */
 :root {
   --background: #ffffff;
-  --foreground: #0f172a; /* slate-900 */
-  --primary: #FF0000; /* violet-500 */
+  --foreground: #0f172a; /* dark text for readability */
+  --primary: #FF0000;    /* brand color */
   --primary-foreground: #ffffff;
-  --border: #e5e7eb; /* gray-200 */
-  --muted: #64748b; /* slate-500 */
+  --border: #e5e7eb;
+  --muted: #64748b;
   --card: #ffffff;
 }
 
+/* ----------------- Theme Variables ----------------- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -22,28 +24,62 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ----------------- Dark Mode ----------------- */
 :root[data-theme="dark"] {
   --background: #0a0a0a;
   --foreground: #e5e7eb;
-  --primary: #FF0000; /* keep brand accent consistent */
+  --primary: #FF0000;
   --primary-foreground: #000000;
-  --border: #1f2937; /* gray-800 */
-  --muted: #9ca3af; /* gray-400 */
+  --border: #1f2937;
+  --muted: #9ca3af;
   --card: #0f0f0f;
 }
 
+/* ----------------- Light Mode (only background white) ----------------- */
 :root[data-theme="light"] {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --primary: #FF0000;
-  --primary-foreground: #ffffff;
-  --border: #e5e7eb;
-  --muted: #64748b;
-  --card: #ffffff;
+  --background: #ffffff;  /* only change background */
 }
 
+/* ----------------- Global Styles ----------------- */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden
 }
+
+/* ----------------- Ball Styles ----------------- */
+.ball {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  filter: brightness(1.5);
+  background: var(--foreground); /* ball color follows text */
+}
+
+/* ----------------- Spin Animations ----------------- */
+@keyframes spin-slow { from { transform: rotate(0deg);} to {transform: rotate(360deg);} }
+@keyframes spin-reverse { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
+@keyframes spin-fast { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+@keyframes spin-mid { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+@keyframes spin-reverse-slow { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
+@keyframes spin-faster { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+@keyframes spin-mid-slow { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+@keyframes spin-slower { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+@keyframes spin-reverse-fast { from {transform: rotate(360deg);} to {transform: rotate(0deg);} }
+
+/* ----------------- Apply Animation Speeds ----------------- */
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+.animate-spin-reverse { animation: spin-reverse 25s linear infinite; }
+.animate-spin-fast { animation: spin-fast 12s linear infinite; }
+.animate-spin-mid { animation: spin-mid 18s linear infinite; }
+.animate-spin-reverse-slow { animation: spin-reverse-slow 30s linear infinite; }
+.animate-spin-faster { animation: spin-faster 8s linear infinite; }
+.animate-spin-mid-slow { animation: spin-mid-slow 22s linear infinite; }
+.animate-spin-slower { animation: spin-slower 35s linear infinite; }
+.animate-spin-reverse-fast { animation: spin-reverse-fast 10s linear infinite; }
+
