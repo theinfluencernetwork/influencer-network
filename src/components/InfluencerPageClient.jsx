@@ -949,7 +949,7 @@ export default function InfluencerPage() {
             ];
             const rotation = rotations[i % rotations.length];
             return (
-              // ✅ FIXED: unique key using img + index
+              //  FIXED: unique key using img + index
               <motion.img
                 whileHover={{ scale: 1.08, rotate: 0 }}
                 key={img + i}
@@ -962,7 +962,7 @@ export default function InfluencerPage() {
         </motion.div>
       </section>
 
-      {/* 👉 Add Marquee right below Hero */}
+      {/*  Add Marquee right below Hero */}
       <div className="w-full py-10 bg-white">
         <Marquee influencers={influencers} />
       </div>
@@ -1068,7 +1068,7 @@ export default function InfluencerPage() {
             .filter(
               (inf) =>
                 selectedCategory === "All" || inf.category === selectedCategory
-            ) // ✅ show only selected category
+            ) // show only selected category
             .map((inf) => (
               <div
                 key={inf.id}
