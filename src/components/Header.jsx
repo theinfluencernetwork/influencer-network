@@ -10,7 +10,7 @@ export default function Header() {
   // Styled nav links
   const navLinks = [
     {
-      href: "/influencers", // ✅ updated path (was "/creators")
+      href: "/influencers", // updated path (was "/creators")
       label: (
         <>
           <span className="inline-flex items-center justify-center w-6 h-6 rounded-full text-sm mr-1 shadow-md transition-transform duration-300 hover:scale-110">

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// ✅ Always render motion.div (no hydration mismatch)
+// Always render motion.div (no hydration mismatch)
 function SafeMotionDiv({ children, ...props }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
