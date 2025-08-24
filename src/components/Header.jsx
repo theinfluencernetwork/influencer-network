@@ -7,19 +7,44 @@ import Image from "next/image";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Styled nav links
   const navLinks = [
+    {
+      href: "/influencers", // ✅ updated path (was "/creators")
+      label: (
+        <>
+          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full text-sm mr-1 shadow-md transition-transform duration-300 hover:scale-110">
+            👉
+          </span>
+          For Creators
+        </>
+      ),
+    },
+    {
+      href: "/live-campaigns",
+      label: (
+        <>
+          {/* Bright glowing LIVE icon */}
+          <span className="relative inline-flex w-6 h-6 mr-1">
+            {/* Glowing pulse effect */}
+            <span className="absolute inset-0 bg-red-500 rounded-full animate-pulse blur-sm"></span>
+            {/* Solid red circle with white dot */}
+            <span className="relative w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+              ●
+            </span>
+          </span>
+          LIVE Campaigns!
+        </>
+      ),
+    },
     { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/influencers", label: "Influencers" },
-    { href: "/brands", label: "Brands" },
-    { href: "/testimonials", label: "Testimonials" },
   ];
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-white shadow-md">
       <div className="mx-auto max-w-6xl px-6 py-5">
         <div className="flex items-center justify-between">
-          {/* Logo (slightly bigger) */}
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image src="/logo.svg" alt="Logo" width={180} height={70} />
           </Link>
@@ -35,14 +60,13 @@ export default function Header() {
                     after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
                     after:bg-gradient-to-r after:from-black after:to-red-500
                     after:opacity-0 hover:after:opacity-100
-                    after:transition-all after:duration-500 hover:after:w-full"
+                    after:transition-all after:duration-500 hover:after:w-full flex items-center"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
 
-            {/* Theme Toggle stays on far right */}
             <ThemeToggle />
           </div>
 
@@ -67,7 +91,7 @@ export default function Header() {
                   after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0
                   after:bg-gradient-to-r after:from-black after:to-red-500
                   after:opacity-0 hover:after:opacity-100
-                  after:transition-all after:duration-500 hover:after:w-full"
+                  after:transition-all after:duration-500 hover:after:w-full flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

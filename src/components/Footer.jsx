@@ -20,7 +20,7 @@ export default function Footer() {
         {/* Left Section - Logo Text & Tagline */}
         <div className="space-y-4">
           <div className="font-extrabold text-3xl leading-tight tracking-wide">
-            <span className="block text-red-500">THE</span>
+            <span className="block text-white">THE</span>
             <span className="block text-white mt-1">INFLUENCER NETWORK</span>
           </div>
           <p className="text-sm text-gray-300 max-w-xs mx-auto sm:mx-0">
@@ -36,7 +36,6 @@ export default function Footer() {
             <Link href="/services" className="hover:text-red-400 transition">Services</Link>
             <Link href="/influencers" className="hover:text-red-400 transition">Influencers</Link>
             <Link href="/brands" className="hover:text-red-400 transition">Brands</Link>
-            <Link href="/testimonials" className="hover:text-red-400 transition">Testimonials</Link>
             <Link href="/contact" className="hover:text-red-400 transition">Contact</Link>
           </div>
         </nav>
@@ -50,16 +49,26 @@ export default function Footer() {
           </div>
           <div className="flex justify-center sm:justify-start items-center gap-2">
             <Mail size={18} className="text-red-400" />
-            <span>info@influencernetwork.in</span>
+            <a href="mailto:support@influencernetwork.in" className="hover:text-red-400 transition">
+              support@influencernetwork.in
+            </a>
+          </div>
+          <div className="flex justify-center sm:justify-start items-center gap-2">
+            <Mail size={18} className="text-red-400" />
+            <a href="mailto:collab@influencernetwork.in" className="hover:text-red-400 transition">
+              collab@influencernetwork.in
+            </a>
           </div>
           <div className="flex justify-center sm:justify-start items-center gap-2">
             <MapPin size={18} className="text-red-400" />
-            <span>Patna, Bihar 800020</span>
+            <span>
+              Sector 16C, Gaur City 2, Greater Noida, Uttar Pradesh 201318
+            </span>
           </div>
 
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-start gap-4 mt-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.facebook.com/profile.php?id=61574455124778" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Facebook size={20} />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
