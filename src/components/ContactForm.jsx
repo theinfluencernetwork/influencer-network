@@ -133,10 +133,10 @@ export default function ContactPage() {
       {/* Footer Info */}
       <div className="mt-12 text-center text-sm text-muted space-y-1">
         <p>Email: info@influencernetwork.in</p>
+        <p>Email: collab@influencernetwork.in</p>
         <p>Phone: +91 6209767269</p>
         <p>
-          SpringSpace, 2nd Floor, Kanti Factory Rd, Kankarbagh, Patna, Bihar
-          800020
+           Sector 16C, Gaur City 2, Greater Noida, Uttar Pradesh 201318
         </p>
       </div>
     </div>
