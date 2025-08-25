@@ -287,7 +287,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/ranveer.brar/",
   },
   {
-    id:122,
+    id:123,
     name: "Sanjeev Kapoor",
     category: "Food",
     followers: "2.1M",
@@ -295,7 +295,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/sanjeevkapoor/",
   },
   {
-    id:123,
+    id:124,
     name: "Archana Doshi",
     category: "Food",
     followers: "700K",
@@ -303,7 +303,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/archanaskitchen/",
   },
   {
-    id:124,
+    id:125,
     name: "Pooja Dhingra",
     category: "Food",
     followers: "850K",
@@ -311,7 +311,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/poojadhingra/",
   },
   {
-    id:125,
+    id:126,
     name: "The Bong Guy",
     category: "Food",
     followers: "600K",
@@ -319,7 +319,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/yourbongguy/",
   },
   {
-    id:126,
+    id:127,
     name: "Nisha Madhulika",
     category: "Food",
     followers: "341M",
@@ -327,7 +327,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/nishamadhulika_cooks/",
   },
   {
-    id:127,
+    id:128,
     name: "Hebbars Kitchen",
     category: "Food",
     followers: "3.7M",
@@ -335,7 +335,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/hebbars.kitchen/",
   },
   {
-    id:128,
+    id:129,
     name: "Chetna Makan",
     category: "Food",
     followers: "695K",
@@ -343,7 +343,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/chetnamakan/",
   },
   {
-    id:129,
+    id:130,
     name: "Kunal Sharma",
     img: "influencers/kunals.jpeg",
     followers: "180K",
@@ -353,7 +353,7 @@ const categoryInfluencers = [
 
   // BEAUTY
   {
-    id:130,
+    id:131,
     name: "Malvika Sitlani",
     category: "Beauty",
     followers: "711K",
@@ -361,7 +361,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/malvikasitlaniofficial/",
   },
   {
-    id:131,
+    id:132,
     name: "Neha Malhotra",
     img: "influencers/neha.jpeg",
     followers: "44.1K",
@@ -369,7 +369,7 @@ const categoryInfluencers = [
     insta: "https://instagram.com/nehaulicious",
   },
   {
-    id:132,
+    id:133,
     name: "Debasree Banerjee",
     category: "Beauty",
     followers: "400K",
@@ -377,7 +377,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/debasreebanerjee/",
   },
   {
-    id:133,
+    id:134,
     name: "Santoshi Shetty",
     category: "Beauty",
     followers: "720K",
@@ -385,7 +385,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/santoshishetty/",
   },
   {
-    id:134,
+    id:135,
     name: "Ankita Chaturvedi",
     category: "Beauty",
     followers: "300K",
@@ -393,7 +393,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/coralistablog/",
   },
   {
-    id:135,
+    id:136,
     name: "Komal Narang",
     category: "Beauty",
     followers: "500K",
@@ -401,7 +401,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/myhappinesz/",
   },
   {
-    id:136,
+    id:137,
     name: "Shruti Arjun Anand",
     category: "Beauty",
     followers: "9M",
@@ -409,7 +409,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/shrutiarjunanand/",
   },
   {
-    id:137,
+    id:138,
     name: "Jovita George",
     category: "Beauty",
     followers: "250K",
@@ -417,7 +417,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/mrjovitageorge/",
   },
   {
-    id:138,
+    id:139,
     name: "Shreya Jain",
     category: "Beauty",
     followers: "430K",
@@ -425,7 +425,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/shreyajain26/",
   },
   {
-    id:139,
+    id:140,
     name: "Ankush Bahuguna",
     category: "Beauty",
     followers: "1.2M",
@@ -435,7 +435,7 @@ const categoryInfluencers = [
 
   // FITNESS
   {
-    id:140,
+    id:141,
     name: "Ranveer Allahbadia",
     category: "Fitness",
     followers: "2M",
@@ -443,7 +443,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/beerbiceps/",
   },
   {
-    id:141,
+    id:142,
     name: "Yasmin Karachiwala",
     category: "Fitness",
     followers: "900K",
@@ -451,7 +451,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/yasminkarachiwala/",
   },
   {
-    id:142,
+    id:143,
     name: "Rujuta Diwekar",
     category: "Fitness",
     followers: "1.8M",
@@ -459,7 +459,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/rujuta.diwekar/",
   },
   {
-    id:143,
+    id:144,
     name: "Sapna Vyas",
     category: "Fitness",
     followers: "1.5M",
@@ -467,7 +467,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/coachsapna/",
   },
   {
-    id:144,
+    id:145,
     name: "Pranit Shilimkar",
     category: "Fitness",
     followers: "600K",
@@ -475,7 +475,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/fitnesstalks_with_pranit/",
   },
   {
-    id:145,
+    id:146,
     name: "Gaurav Taneja",
     category: "Fitness",
     followers: "3.5M",
@@ -483,7 +483,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/taneja.gaurav/",
   },
   {
-    id:146,
+    id:147,
     name: "Anushka Rathod",
     category: "Fitness",
     followers: "1.2M",
@@ -491,7 +491,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/anushkarathod98/",
   },
   {
-    id:147,
+    id:148,
     name: "Rajveer Shishodia",
     category: "Fitness",
     followers: "350K",
@@ -499,7 +499,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/rajveer_fitness_series/",
   },
   {
-    id:148,
+    id:149,
     name: "Akshay Chopra",
     category: "Fitness",
     followers: "300K",
@@ -507,7 +507,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/akshaychopra_werstupid/",
   },
   {
-    id:149,
+    id:150,
     name: "Soniya Singh Khatri",
     img: "/influencers/soniya.jpg",
     followers: "2.6M",
@@ -517,7 +517,7 @@ const categoryInfluencers = [
 
   // TECH
   {
-    id: 150,
+    id: 151,
     name: "Technical Guruji",
     category: "Tech",
     followers: "5M",
@@ -525,7 +525,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/technicalguruji/",
   },
   {
-    id: 151,
+    id: 152,
     name: "Geeky Ranjit",
     category: "Tech",
     followers: "800K",
@@ -533,7 +533,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/geekyranjitofficial/",
   },
   {
-    id: 152,
+    id: 153,
     name: "Aditya Verma",
     img: "/influencers/aditya.jpg",
     followers: "400K",
@@ -541,7 +541,7 @@ const categoryInfluencers = [
     insta: "https://instagram.com/digitalquadrate",
   },
   {
-    id: 153,
+    id: 154,
     name: "Trakin Tech",
     category: "Tech",
     followers: "2M",
@@ -549,7 +549,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/trakintech/",
   },
   {
-    id: 154,
+    id: 155,
     name: "Shlok Srivastava",
     category: "Tech",
     followers: "1.2M",
@@ -557,7 +557,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/techburner/",
   },
   {
-    id: 155,
+    id: 156,
     name: "Gadgets 360",
     category: "Tech",
     followers: "5M",
@@ -572,7 +572,7 @@ const categoryInfluencers = [
 //     insta: "https://www.instagram.com/beebomco/",
 //   },
   {
-    id: 156,
+    id: 157,
     name: "C4ETech",
     category: "Tech",
     followers: "500K",
@@ -580,7 +580,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/c4etech/",
   },
   {
-    id: 157,
+    id: 158,
     name: "Techno Ruhez",
     category: "Tech",
     followers: "1M",
@@ -588,7 +588,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/technoruhez/",
   },
   {
-    id: 158,
+    id: 159,
     name: "Gyan Therapy",
     category: "Tech",
     followers: "750K",
@@ -598,7 +598,7 @@ const categoryInfluencers = [
 
   // EDUTECH
   {
-    id: 159,
+    id: 160,
     name: "Unacademy",
     category: "Edutech",
     followers: "943K",
@@ -606,7 +606,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/unacademy/",
   },
   {
-    id: 160,
+    id: 161,
     name: "Physics Wallah",
     category: "Edutech",
     followers: "3.6M",
@@ -614,7 +614,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/physicswallah/",
   },
   {
-    id: 161,
+    id: 162,
     name: "BYJU'S",
     category: "Edutech",
     followers: "228K",
@@ -622,7 +622,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/byjus_app/",
   },
   {
-    id: 162,
+    id: 163,
     name: "Vedantu",
     category: "Edutech",
     followers: "175K",
@@ -630,7 +630,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/vedantu_learn/",
   },
   {
-    id: 163,
+    id: 164,
     name: "Doubtnut",
     category: "Edutech",
     followers: "61.8K",
@@ -638,7 +638,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/doubtnut/",
   },
   {
-    id: 164,
+    id: 165,
     name: "Toppr",
     category: "Edutech",
     followers: "32.9K",
@@ -646,7 +646,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/mytoppr/",
   },
   {
-    id: 165,
+    id: 166,
     name: "Khan Academy",
     category: "Edutech",
     followers: "304K",
@@ -654,7 +654,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/khanacademy/",
   },
   {
-    id: 166,
+    id: 167,
     name: "Gradeup",
     category: "Edutech",
     followers: "350K",
@@ -662,7 +662,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/gradeupapp/",
   },
   {
-    id: 167,
+    id: 168,
     name: "Career360",
     category: "Edutech",
     followers: "21.3K",
@@ -672,7 +672,7 @@ const categoryInfluencers = [
 
   // PARENTING
   {
-    id: 168,
+    id: 169,
     name: "Momspresso",
     category: "Parenting",
     followers: "190K",
@@ -680,7 +680,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/momspresso/",
   },
   {
-    id: 169,
+    id: 170,
     name: "Parentune",
     category: "Parenting",
     followers: "20.2K",
@@ -688,7 +688,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/parentunelive/",
   },
   {
-    id: 170,
+    id: 171,
     name: "Baby Chakra",
     category: "Parenting",
     followers: "116K",
@@ -696,7 +696,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/mybabychakra/",
   },
   {
-    id: 171,
+    id: 172,
     name: "FirstCry Parenting",
     category: "Parenting",
     followers: "1.7M",
@@ -704,7 +704,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/firstcryindia/",
   },
   {
-    id: 172,
+    id: 173,
     name: "Kidsstoppress",
     category: "Parenting",
     followers: "367K",
@@ -712,7 +712,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/kidsstoppress/",
   },
   {
-    id: 173,
+    id: 174,
     name: "Being Momma",
     category: "Parenting",
     followers: "350K",
@@ -744,7 +744,7 @@ const categoryInfluencers = [
 
   // FINANCE
   {
-    id: 174,
+    id: 175,
     name: "CA Rachana Phadke",
     category: "Finance",
     followers: "1.5M",
@@ -752,7 +752,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/ca_rachanaranade/",
   },
   {
-    id: 175,
+    id: 176,
     name: "Ankur Warikoo",
     category: "Finance",
     followers: "3.7M",
@@ -760,7 +760,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/ankurwarikoo/",
   },
   {
-    id: 176,
+    id: 177,
     name: "Neha Nagar",
     category: "Finance",
     followers: "2M",
@@ -768,7 +768,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/iamnehanagar/",
   },
   {
-    id: 177,
+    id: 178,
     name: "Sharan Hegde",
     category: "Finance",
     followers: "2.8M",
@@ -776,7 +776,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/financewithsharan/",
   },
   {
-    id: 178,
+    id: 179,
     name: "Pranjal Kamra",
     category: "Finance",
     followers: "938K",
@@ -784,7 +784,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/pranjalkamra/",
   },
   {
-    id: 179,
+    id: 180,
     name: "Shreya Kapoor",
     category: "Finance",
     followers: "609K",
@@ -792,7 +792,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/shreyakapoor/",
   },
   {
-    id: 180,
+    id: 181,
     name: "Asset Yogi",
     category: "Finance",
     followers: "212K",
@@ -800,7 +800,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/assetyogi/",
   },
   {
-    id: 181,
+    id: 182,
     name: "CA Mohit Tandon",
     category: "Finance",
     followers: "250K",
@@ -818,7 +818,7 @@ const categoryInfluencers = [
 
   // GAMING
   {
-    id: 182,
+    id: 183,
     name: "Mortal",
     category: "Gaming",
     followers: "5.1M",
@@ -826,7 +826,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/ig_mortal/",
   },
   {
-    id: 183,
+    id: 184,
     name: "Dynamo Gaming",
     category: "Gaming",
     followers: "2M",
@@ -834,7 +834,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/dynamo__gaming/",
   },
   {
-    id: 184,
+    id: 185,
     name: "ScoutOP",
     category: "Gaming",
     followers: "4.4M",
@@ -842,7 +842,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/scoutop/",
   },
   {
-    id: 185,
+    id: 186,
     name: "CarryisLive",
     category: "Gaming",
     followers: "21.3M",
@@ -850,7 +850,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/carryminati/",
   },
   {
-    id: 186,
+    id: 187,
     name: "Jonathan Gaming",
     category: "Gaming",
     followers: "4M",
@@ -858,7 +858,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/ig_jonathangaming/",
   },
   {
-    id: 187,
+    id: 188,
     name: "Kronten",
     category: "Gaming",
     followers: "446K",
@@ -866,7 +866,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/krontengaming/",
   },
   {
-    id: 188,
+    id: 189,
     name: "Xyaa",
     category: "Gaming",
     followers: "227K",
@@ -874,7 +874,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/xyaalive/",
   },
   {
-    id: 189,
+    id: 190,
     name: "Ankkita C",
     category: "Gaming",
     followers: "181K",
@@ -882,7 +882,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/ankkitac/",
   },
   {
-    id: 190,
+    id: 191,
     name: "Techno Gamerz",
     category: "Gaming",
     followers: "1.6M",
