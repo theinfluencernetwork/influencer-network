@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 
+import { useRouter } from 'next/navigation';
 const cities = [
   { name: "Delhi", influencers: "500+", img: "/Cities/Delhi.jpg" },
   { name: "Mumbai", influencers: "1000+", img: "/Cities/Mumbai.jpg" },
@@ -27,6 +28,7 @@ const cities = [
 ];
 
 export default function CitiesGrid() {
+  const router = useRouter();
   const batchSize = 5; // 5 cities per view on desktop
   const [desktopIndex, setDesktopIndex] = useState(0);
 
@@ -51,6 +53,7 @@ export default function CitiesGrid() {
             <div
               key={index}
               className="min-w-[250px] flex-shrink-0 rounded-xl overflow-hidden shadow-lg bg-white cursor-pointer hover:scale-105 transition-transform duration-300 relative"
+              onClick={() => router.push(`/cities/${city.name}`)}
             >
               <img
                 src={city.img}
@@ -62,9 +65,9 @@ export default function CitiesGrid() {
                 <p className="text-gray-200 text-sm">
                   {city.influencers} Influencers
                 </p>
-              </div>
+              </div>  
             </div>
-          ))}
+                     ))}
         </div>
       </div>
 
@@ -73,7 +76,8 @@ export default function CitiesGrid() {
         {currentBatch.map((city, index) => (
           <div
             key={index}
-            className="relative rounded-xl overflow-hidden shadow-lg group transform transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(139,0,0,0.7),0_0_15px_rgba(0,0,0,0.6)] bg-white"
+            className="relative cursor-pointer rounded-xl overflow-hidden shadow-lg group transform transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(139,0,0,0.7),0_0_15px_rgba(0,0,0,0.6)] bg-white"
+            onClick={() => router.push(`/cities/${city.name}`)}
           >
             <img
               src={city.img}

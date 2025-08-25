@@ -10,7 +10,7 @@ export const citiesData = {
       },
       stats: [
         { label: "Local Influencers", value: "6,500+" },
-        { label: "Combined Reach", value: "65M+" },
+        { label: "Combined Reach", value: "65+" },
         { label: "Local Brands", value: "650+" },
         { label: "Successful Campaigns", value: "600+" },
       ],
