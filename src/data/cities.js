@@ -131,5 +131,137 @@ export const citiesData = {
         },
       ],
     },
-  };
-  
+    delhi: {
+      hero: {
+        title: "Influencer Marketing in Delhi",
+        subtitle:
+          "Partner with Delhi's top content creators to boost your brand visibility in India's capital city, reaching diverse audiences and urban trendsetters.",
+        bgImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+        ctaLink: "#contact-form",
+        ctaText: "Start Your Campaign",
+      },
+      stats: [
+        { label: "Local Influencers", value: "5,200+" },
+        { label: "Combined Reach", value: "70+" },
+        { label: "Local Brands", value: "580+" },
+        { label: "Successful Campaigns", value: "550+" },
+      ],
+      overview: {
+        title: "Influencer Marketing in Delhi - The Urban Capital",
+        description:
+          "Delhi offers a vibrant and diverse audience base, perfect for influencer campaigns across fashion, lifestyle, travel, and city culture.",
+        points: [
+          "Connect with trendsetters and city explorers",
+          "Leverage Delhi's rich urban culture and events for campaigns",
+          "Collaborate with influencers across niches like vlogging, lifestyle, and city pages",
+        ],
+        image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+        ctaLink: "#top-influencers",
+        ctaText: "Discover Delhi's Top Influencers",
+      },
+      influencers: [
+        {
+          name: "Street.of.delhi",
+          category: "City page",
+          platform: "Instagram",
+          followers: "178K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/street of Delhi.jpg",
+          link: "https://www.instagram.com/street.of.delhi?igsh=Y25lemJicHluaGxt",
+        },
+        {
+          name: "prakaashtv",
+          category: "Vlogger",
+          platform: "Instagram",
+          followers: "100K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/prakaashtv.jpg",
+          link: "https://www.instagram.com/prakaashtv?igsh=dmtpZTlmMDkzd3I5",
+        },
+        {
+          name: "delhi.dairy",
+          category: "City page",
+          platform: "Instagram",
+          followers: "157K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/delhi dairy_.jpg",
+          link: "https://www.instagram.com/delhi.dairy_?igsh=MXN0b2J1aG1ob3cwaw==",
+        },
+        {
+          name: "delhi shehar mein",
+          category: "City page",
+          platform: "Instagram",
+          followers: "375K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/delhi shehar mein.jpg",
+          link: "https://www.instagram.com/delhi_shehar_mein?igsh=MWRydm40cDRoNXQxdQ==",
+        },
+        {
+          name: "fantasticdelhi",
+          category: "City page",
+          platform: "Instagram",
+          followers: "187K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/fantastic delhi_.jpg",
+          link: "https://www.instagram.com/fantasticdelhi?igsh=MTg2aWdmcTV2Z3A1Zg==",
+        },
+        {
+          name: "sodelhi",
+          category: "City page",
+          platform: "Instagram",
+          followers: "807K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/So Delhi_.jpg",
+          link: "https://www.instagram.com/sodelhi?igsh=MWlzMnl0eGc3eGEzNQ==",
+        },
+        {
+          name: "unseen.delhi",
+          category: "City page",
+          platform: "Instagram",
+          followers: "108K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/unseen delhi.jpg",
+          link: "https://www.instagram.com/unseen.delhi?igsh=MW5zZXR0b3d0ZHFjeA==",
+        },
+        {
+          name: "anokhi_delhi",
+          category: "City page",
+          platform: "Instagram",
+          followers: "87K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/anokhidelhi.jpg",
+          link: "https://www.instagram.com/anokhi_delhi?igsh=MXBkZjJpdGptMXRibQ==",
+        },
+        {
+          name: "namaste delhi",
+          category: "City page",
+          platform: "Instagram",
+          followers: "80K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/namastedelhi.jpg",
+          link: "https://www.instagram.com/namaste.delhi?igsh=MWVnYzVxZHRzZnJuZw==",
+        },
+        {
+          name: "delhiexplorer",
+          category: "City page",
+          platform: "Instagram",
+          followers: "75K",
+          location: "Delhi",
+          img: "/images/influencers/delhi/delhiexplorer.jpg",
+          link: "https://www.instagram.com/delhiexplorer?igsh=MWdxMjRtZXJxZnVmNw==",
+        },
+      ],
+      faqs: [
+        {
+          question: "How do brands maximize engagement with Delhi influencers?",
+          answer:
+            "Brands can collaborate with Delhi influencers for lifestyle, fashion, and business campaigns. Engaging through events, brand challenges, and city-specific content increases visibility.",
+        },
+        {
+          question: "What is the typical pricing for influencers in Delhi?",
+          answer:
+            "Delhi influencer pricing varies by reach and engagement. Micro-influencers (10K-50K followers) charge ₹12,000-₹30,000 per post, while macro-influencers can charge ₹1,00,000+ per campaign.",
+        },
+      ],
+    }
+}
