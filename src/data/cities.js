@@ -263,5 +263,5 @@ export const citiesData = {
             "Delhi influencer pricing varies by reach and engagement. Micro-influencers (10K-50K followers) charge ₹12,000-₹30,000 per post, while macro-influencers can charge ₹1,00,000+ per campaign.",
         },
       ],
-    }
+    }    
 }

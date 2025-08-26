@@ -67,7 +67,7 @@ export default function Header() {
               ))}
             </nav>
 
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,7 +97,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
         )}
       </div>

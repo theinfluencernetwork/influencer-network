@@ -8,6 +8,7 @@ import {
   MotionDetails,
   MotionA,
 } from "@/components/ClientMotion";
+import FAQItem from "@/components/FAQitems";
 
 export default function CityPage({ params }) {
   const cityKey = params.city?.toLowerCase();
@@ -40,7 +41,7 @@ export default function CityPage({ params }) {
           <MotionA
             href={data.hero.ctaLink}
             className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded inline-block"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.95 }}
           >
             {data.hero.ctaText}
@@ -67,7 +68,7 @@ export default function CityPage({ params }) {
           {data.stats.map((stat, idx) => (
             <MotionDiv
               key={idx}
-              className="bg-white p-6 rounded shadow hover:translate-y-[-5px] transition-transform"
+              className="bg-white p-6 rounded shadow hover:shadow-red-800 hover:translate-y-[-5px]  transition-transform"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -110,7 +111,7 @@ export default function CityPage({ params }) {
             <MotionA
               href={data.overview.ctaLink}
               className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded inline-block"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 , rotate: 1 }}
               whileTap={{ scale: 0.95 }}
             >
               {data.overview.ctaText}
@@ -120,7 +121,7 @@ export default function CityPage({ params }) {
             <img
               src={data.overview.image}
               alt={data.overview.title}
-              className="w-full h-auto transition-transform duration-500 hover:scale-105"
+              className="w-full h-auto transition-transform duration-1000 hover:scale-120"
             />
           </div>
         </div>
@@ -145,50 +146,79 @@ export default function CityPage({ params }) {
             <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
               {data.influencers.map((inf, idx) => (
                 <MotionDiv
-                  key={idx}
-                  className="bg-white rounded-lg p-4 shadow hover:shadow-lg transition-transform hover:-translate-y-1 flex flex-col"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.2 }}
+                key={idx}
+                className="group relative flex flex-col  bg-white rounded-2xl p-4 shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+              >
+                {/* Icon + Info */}
+                
+                <div className="flex items-center mb-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mr-3 flex-shrink-0 border-2 border-white shadow-md transition-colors duration-300 group-hover:border-red-500">
+                    <img
+                      src={inf.img}
+                      alt={inf.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">{inf.name}</h3>
+                    <span className="text-red-600 uppercase text-xs font-bold">{inf.category}</span>
+                    <div className="text-gray-500 text-xs mt-1 flex items-center">
+                      <i className="mr-1"></i>
+                      {inf.location} • {inf.platform}
+                    </div>
+                  </div>
+                </div>
+              
+                {/* Stats */}
+                <div className="flex justify-between mt-auto bg-gray-100 rounded p-2 mb-3 text-center text-sm">
+                  <div className="flex-1">
+                    <h4 className="text-black">{inf.followers}</h4>
+                    <p className="text-gray-500 text-xs">Followers</p>
+                  </div>
+                </div>
+                {/* CTA */}
+                <MotionA
+                  href={inf.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" bg-red-600 hover:bg-red-700 text-white text-center py-2 rounded"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mr-3 flex-shrink-0 border-2 border-white shadow">
-                      <img
-                        src={inf.img}
-                        alt={inf.name}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">{inf.name}</h3>
-                      <span className="text-red-600 uppercase text-xs font-bold">
-                        {inf.category}
-                      </span>
-                      <div className="text-gray-500 text-xs mt-1 flex items-center">
-                        <i className="mr-1">📍</i>
-                        {inf.location} • {inf.platform}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between bg-gray-100 rounded p-2 mb-3 text-center text-sm">
-                    <div className="flex-1">
-                      <h4 className="text-black">{inf.followers}</h4>
-                      <p className="text-gray-500 text-xs">Followers</p>
-                    </div>
-                  </div>
-                  <MotionA
-                    href={inf.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto bg-red-600 hover:bg-red-700 text-white text-center py-2 rounded"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    View Profile
-                  </MotionA>
-                </MotionDiv>
-              ))}
+                  View Profile
+                </MotionA>
+              
+                {/* Hover border glow */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-red-500 pointer-events-none transition-all duration-300"></div>
+              </MotionDiv>
+              
+              ))}            
+              {/* View More Card */}
+              <MotionDiv
+                className="group relative flex flex-col items-center justify-center bg-white rounded-2xl p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl col-span-2 md:col-span-2"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: data.influencers.length * 0.2 }}
+              >
+                <p className="text-black font-semibold text-lg mb-4 text-center">
+                  150+ more creators available in Delhi
+                </p>
+                <MotionA
+                  href="../contact"
+                  className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded shadow transition-all duration-300 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Contact Us to Access All Creators
+                </MotionA>
+
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-red-500 pointer-events-none transition-all duration-300"></div>
+              </MotionDiv>
             </div>
           </div>
         </section>
@@ -198,20 +228,21 @@ export default function CityPage({ params }) {
       {data.faqs.length > 0 && (
         <section className="py-16" id="city-faq">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">FAQs</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions About Influencer Marketing in {cityKey.charAt(0).toUpperCase() + cityKey.slice(1)}</h2>
             <div className="space-y-4">
               {data.faqs.map((faq, idx) => (
-                <MotionDetails
-                  key={idx}
-                  className="border rounded p-4 bg-white"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                >
-                  <summary className="font-semibold cursor-pointer">{faq.question}</summary>
-                  <p className="mt-2 text-gray-700">{faq.answer}</p>
-                </MotionDetails>
+                // <MotionDetails
+                //   key={idx}
+                //   className="border rounded p-4 bg-white"
+                //   initial={{ opacity: 0, y: 20 }}
+                //   whileInView={{ opacity: 1, y: 0 }}
+                //   viewport={{ once: true }}
+                //   transition={{ duration: 0.5, delay: idx * 0.1 }}
+                // >
+                //   <summary className="font-semibold cursor-pointer">{faq.question}</summary>
+                //   <p className="mt-2 text-gray-700">{faq.answer}</p>
+                // </MotionDetails>
+                <FAQItem key={idx} {...faq} />
               ))}
             </div>
           </div>
