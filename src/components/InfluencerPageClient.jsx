@@ -602,7 +602,7 @@ const categoryInfluencers = [
     name: "Unacademy",
     category: "Edutech",
     followers: "943K",
-    img: "/influencers/unacademy.avif",
+    img: "/influencers/unacademy.png",
     insta: "https://www.instagram.com/unacademy/",
   },
   {
@@ -610,7 +610,7 @@ const categoryInfluencers = [
     name: "Physics Wallah",
     category: "Edutech",
     followers: "3.6M",
-    img: "/influencers/pw.webp",
+    img: "/companies/PW.jpg",
     insta: "https://www.instagram.com/physicswallah/",
   },
   {
@@ -618,7 +618,7 @@ const categoryInfluencers = [
     name: "BYJU'S",
     category: "Edutech",
     followers: "228K",
-    img: "/influencers/byju.webp",
+    img: "/influencers/byju.png",
     insta: "https://www.instagram.com/byjus_app/",
   },
   {
@@ -650,7 +650,7 @@ const categoryInfluencers = [
     name: "Khan Academy",
     category: "Edutech",
     followers: "304K",
-    img: "/influencers/khan.jpg",
+    img: "/companies/khan-academy.png",
     insta: "https://www.instagram.com/khanacademy/",
   },
   {
@@ -1091,7 +1091,7 @@ export default function InfluencerPage() {
                     href={inf.insta}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-yellow-400 text-sm mb-2 hover:underline"
+                    className="text-red-500 text-sm mb-2 hover:underline"
                   >
                     @{inf.name.toLowerCase().replace(/\s+/g, "")}
                   </a>
@@ -1100,7 +1100,7 @@ export default function InfluencerPage() {
                     {inf.followers} Followers
                   </p>
 
-                  <span className="text-xs mt-2 px-3 py-1 bg-yellow-500 text-black rounded-full font-semibold">
+                  <span className="text-xs mt-2 px-3 py-1 bg-red-500 text-black rounded-full font-semibold">
                     #{inf.category}
                   </span>
 
@@ -1108,7 +1108,7 @@ export default function InfluencerPage() {
                     href={inf.insta}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-400 transition"
+                    className="mt-4 bg-red-500 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-400 transition"
                   >
                     View Insights
                   </a>
