@@ -451,8 +451,8 @@ export const citiesData = {
         platform: "Instagram",
         followers: "292K+",
         location: "PUNE",
-        img: "/influencers/pune/puneartitchen.jpg",
-        link: "https://www.instagram.com/pune_artitchen?igsh=bDBoazN3aTRpaWty",
+        img: "/influencers/pune/pune_artkitchen.jpg",
+        link: "https://www.instagram.com/pune_artkitchen?igsh=bDBoazN3aTRpaWty",
       },
       {
         name: "iloovepune",
@@ -591,7 +591,7 @@ export const citiesData = {
         followers: "1.3M+",
         location: "SURAT",
         img: "/influencers/surat/kemchhosurat.jpg",
-        link: "https://www.instagram.com/emchhosurat?igsh=MWZoangwdDBybm5ubw==",
+        link: "https://www.instagram.com/kemchhosurat?igsh=MWZoangwdDBybm5ubw==",
       },
       {
         name: "I am surat city",
@@ -739,7 +739,7 @@ export const citiesData = {
         followers: "135K+",
         location: "KANPUR",
         img: "/influencers/kanpur/kanpurlovehaihamara.jpg",
-        link: "https://www.instagram.com/anpur_love_hai_hamara__?igsh=NGo0ZGExbHp3Yml",
+        link: "https://www.instagram.com/kanpur_love_hai_hamara__?igsh=NGo0ZGExbHp3Yml",
       },
       {
         name: "Kanpur couple",
@@ -748,7 +748,7 @@ export const citiesData = {
         followers: "153K+",
         location: "KANPUR",
         img: "/influencers/kanpur/kanpurcouple.jpg",
-        link: "https://www.instagram.com/anpurcouple?igsh=enJvODFzb3U5YWo0",
+        link: "https://www.instagram.com/kanpurcouple?igsh=enJvODFzb3U5YWo0",
       },
       {
         name: "kanpur hamari jaan",
@@ -757,7 +757,7 @@ export const citiesData = {
         followers: "284K+",
         location: "KANPUR",
         img: "/influencers/kanpur/kanpurhamarijaan.jpg",
-        link: "https://www.instagram.com/anpur_hamari_jaan?igsh=MWFhZThoeHBwaXQybQ==",
+        link: "https://www.instagram.com/kanpur_hamari_jaan?igsh=MWFhZThoeHBwaXQybQ==",
       },
       {
         name: "the unseen kanpur",
@@ -766,7 +766,7 @@ export const citiesData = {
         followers: "161K+",
         location: "KANPUR",
         img: "/influencers/kanpur/theunseenkanpur.jpg",
-        link: "https://www.instagram.com/the.unseen.anpur?igsh=MW5sN2hzY3BsdXZbQ==",
+        link: "https://www.instagram.com/the.unseen.kanpur?igsh=MW5sN2hzY3BsdXZbQ==",
       },
       {
         name: "kanpur wale",
@@ -775,7 +775,7 @@ export const citiesData = {
         followers: "142K+",
         location: "KANPUR",
         img: "/influencers/kanpur/kanpurwale.jpg",
-        link: "https://www.instagram.com/anpur.wale?igsh=MTIzeWt3MXdvMDAweg==",
+        link: "https://www.instagram.com/kanpur.wale?igsh=MTIzeWt3MXdvMDAweg==",
       },
       {
         name: "Gaurav taneja",
@@ -1600,7 +1600,7 @@ export const citiesData = {
         followers: "700K+",
         location: "LUCKNOW",
         img: "/influencers/lucknow/lucknowdarshan.jpg",
-        link: "https://www.instagram.com/_lucnow.darshan_?igsh=MXhsaHNwdHNiaXR1ZQ==",
+        link: "https://www.instagram.com/_lucknow.darshan_?igsh=MXhsaHNwdHNiaXR1ZQ==",
       },
       {
         name: "things2doinlucknow",
@@ -1609,7 +1609,7 @@ export const citiesData = {
         followers: "231K+",
         location: "LUCKNOW",
         img: "/influencers/lucknow/things2doinlucknow.jpg",
-        link: "https://www.instagram.com/things2doinlucnow_?igsh=M29jMDNrY29naWU=",
+        link: "https://www.instagram.com/things2doinlucknow_?igsh=M29jMDNrY29naWU=",
       },
       {
         name: "i love lucknow",
@@ -1618,7 +1618,7 @@ export const citiesData = {
         followers: "178K+",
         location: "LUCKNOW",
         img: "/influencers/lucknow/ilovelucknow.jpg",
-        link: "https://www.instagram.com/i.love.lucnow?igsh=MWNlbTRiaXdiN2Y3cA==",
+        link: "https://www.instagram.com/i.love.lucknow?igsh=MWNlbTRiaXdiN2Y3cA==",
       },
       {
         name: "lucknowheart",
@@ -1627,7 +1627,7 @@ export const citiesData = {
         followers: "231K+",
         location: "LUCKNOW",
         img: "/influencers/lucknow/lucknowheart.jpg",
-        link: "https://www.instagram.com/lucnow_hearts?igsh=cGQ4c2llOXRxM2Ft",
+        link: "https://www.instagram.com/lucknow_hearts?igsh=cGQ4c2llOXRxM2Ft",
       },
       {
         name: "up tadka",
@@ -1636,7 +1636,7 @@ export const citiesData = {
         followers: "216K+",
         location: "LUCKNOW",
         img: "/influencers/lucknow/uptadka.jpg",
-        link: "https://www.instagram.com/up_tada?igsh=enNoa3E1cG8ydnVp",
+        link: "https://www.instagram.com/up_tadka?igsh=enNoa3E1cG8ydnVp",
       },
       {
         name: "Pooja chandwani",
