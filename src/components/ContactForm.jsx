@@ -17,6 +17,36 @@ function SafeMotionDiv({ children, ...props }) {
 }
 
 export default function ContactPage() {
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const formData = e.currentTarget;
+    const payload = {
+      name: formData.name.value,
+      email: formData.email.value,
+      phone: formData.phone.value,
+      company: formData.company.value,
+      message: formData.message.value,
+    };
+    console.log(payload);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        alert("Message submitted! ✅");
+        e.currentTarget.reset();
+      } else {
+        alert("Error: " + data.error);
+      }
+    } catch (err) {
+      console.error("Submit failed:", err);
+      alert("Network error!");
+    }
+  }
   return (
     <div className="mx-auto max-w-5xl px-4 py-16">
       {/* Title */}
@@ -49,29 +79,34 @@ export default function ContactPage() {
             boxShadow: "0px 12px 30px rgba(0,0,0,0.25)",
           }}
         >
-          <form className="flex flex-col gap-4 flex-grow">
+          <form className="flex flex-col gap-4 flex-grow" onSubmit={handleSubmit}>
             <input
               className="rounded border border-gray-400/40 bg-white/10 text-white px-3 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+              name="name"
               placeholder="Name"
             />
             <input
               className="rounded border border-gray-400/40 bg-white/10 text-white px-3 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+              name="email"
               placeholder="Email"
             />
             <input
               className="rounded border border-gray-400/40 bg-white/10 text-white px-3 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+              name="phone"
               placeholder="Phone"
             />
             <input
               className="rounded border border-gray-400/40 bg-white/10 text-white px-3 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+              name="company"
               placeholder="Company"
             />
             <textarea
               className="rounded border border-gray-400/40 bg-white/10 text-white px-3 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
               rows={5}
+              name="message"
               placeholder="Message"
             />
-            <button className="rounded bg-red-600 hover:bg-red-700 transition px-4 py-2 text-white font-semibold w-max">
+            <button type="submit" className="rounded bg-red-600 hover:bg-red-700 transition px-4 py-2 text-white font-semibold w-max">
               Request a call back
             </button>
           </form>

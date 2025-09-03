@@ -1,0 +1,64 @@
+// Prisma schema for MongoDB
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+  }
+
+model InfluencerApplication {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt     DateTime @default(now())
+
+  fullName      String
+  email         String
+  phone         String?
+  city          String?
+
+  niches        String[]
+  platforms     String[]
+  audienceSize  Int?
+  bio           String?
+  portfolioUrl  String?
+  ratesNote     String?
+  socialLinks   Json?
+  consent       Boolean  @default(true)
+}
+
+model BrandCampaignSubmission {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt      DateTime @default(now())
+
+  brandName      String
+  contactName    String
+  contactEmail    String
+  contactPhone   String?
+
+  campaignTitle  String
+  description    String
+  objectives     String[]
+  budgetMin      Int?
+  budgetMax      Int?
+  startDate      DateTime?
+  endDate        DateTime?
+  targetCities   String[]
+  deliverables   String[]
+  platforms      String[]
+  links          Json?
+}
+
+model ContactusSubmission {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt      DateTime @default(now())
+  name      String
+  email    String
+  phone   String
+  company String
+  message  String
+}
+
+
+
