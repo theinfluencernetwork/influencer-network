@@ -18,13 +18,13 @@ model InfluencerApplication {
   phone         String?
   city          String?
 
-  niches        String[]
-  platforms     String[]
-  audienceSize  Int?
-  bio           String?
-  portfolioUrl  String?
-  ratesNote     String?
-  socialLinks   Json?
+  // niches        String[]
+  // platforms     String[]
+  // audienceSize  Int?
+  // bio           String?
+  // portfolioUrl  String?
+  // ratesNote     String?
+  socialLink   String?
   consent       Boolean  @default(true)
 }
 
