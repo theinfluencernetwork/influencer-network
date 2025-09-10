@@ -59,12 +59,12 @@ export default function Footer() {
               collab@influencernetwork.in
             </a>
           </div>
-          <div className="flex justify-center sm:justify-start items-center gap-2">
+          {/* <div className="flex justify-center sm:justify-start items-center gap-2">
             <MapPin size={18} className="text-red-400" />
             <span>
               Sector 16C, Gaur City 2, Greater Noida, Uttar Pradesh 201318
             </span>
-          </div>
+          </div> */}
 
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-start gap-4 mt-4">

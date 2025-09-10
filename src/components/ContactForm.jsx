@@ -166,7 +166,7 @@ export default function ContactPage() {
         <p>Email: info@influencernetwork.in</p>
         <p>Email: collab@influencernetwork.in</p>
         <p>Phone: +91 6209767269</p>
-        <p>Sector 16C, Gaur City 2, Greater Noida, Uttar Pradesh 201318</p>
+        {/* <p>Sector 16C, Gaur City 2, Greater Noida, Uttar Pradesh 201318</p> */}
       </div>
     </div>
   );

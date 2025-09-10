@@ -11,6 +11,7 @@ import {
   FaAward,
 } from "react-icons/fa";
 import Marquee from "@/components/Marquee";
+
 // Influencer Data
 const influencers = [
   {
@@ -101,12 +102,17 @@ const AboutUs = () => {
           <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             <span className="font-semibold">The Influencer Network</span> is
             India's premier platform connecting brands with top-tier creators.
-            We specialize in crafting campaigns that amplify brand presence,
-            engage audiences authentically, and deliver measurable ROI.
-            <br />
-            From micro-influencers to mega creators, our curated network ensures
-            the right voice for your brand across multiple niches, including
-            lifestyle, entertainment, tech, and more.
+            We go beyond simple collaborations — our approach focuses on
+            building long-lasting relationships between brands and influencers
+            that feel authentic, purposeful, and impactful. Our team specializes
+            in designing data-driven campaigns that not only amplify brand
+            visibility but also foster genuine engagement and meaningful
+            conversations with audiences. <br />
+            Whether you are a growing startup seeking to create a strong market
+            entry or an established brand looking to refresh your digital
+            presence, our curated pool of influencers across multiple niches
+            ensures that your campaign finds the right voice and reaches the
+            right people.
           </p>
         </div>
 
@@ -136,30 +142,43 @@ const AboutUs = () => {
         {/* Mission Section */}
         <Section title="Our Mission" icon={<FaLightbulb />}>
           Our mission is to empower brands with authentic influencer content
-          that drives engagement, builds trust, and achieves measurable ROI. We
-          create campaigns that are not just creative, but highly targeted and
-          results-driven.
+          that drives engagement, builds trust, and achieves measurable ROI.
+          Every campaign we create is rooted in research, storytelling, and
+          creativity. By understanding brand goals and aligning them with the
+          values of carefully chosen influencers, we ensure campaigns resonate
+          with audiences on a personal level. Our ultimate objective is to
+          transform traditional marketing into meaningful digital experiences
+          that inspire action, foster loyalty, and generate sustainable growth
+          for brands.
         </Section>
 
         {/* Vision Section */}
         <Section title="Our Vision" icon={<FaRocket />} gradient>
-          To become India's most trusted influencer ecosystem by connecting
-          brands with creators across all niches. We envision a world where
-          every campaign is meaningful, every collaboration authentic, and every
-          brand message amplified effectively.
+          Our vision is to become India's most trusted influencer ecosystem,
+          bridging the gap between brands and creators through innovation,
+          transparency, and collaboration. We aim to build a future where every
+          brand message is amplified by influencers who genuinely believe in the
+          products and services they endorse. By creating campaigns that are
+          meaningful and authentic, we envision a digital ecosystem where
+          audiences feel connected, engaged, and inspired — turning every
+          interaction into a lasting relationship.
         </Section>
 
         {/* Achievements Section */}
         <Section title="Our Achievements" icon={<FaAward />}>
           - Successfully connected over{" "}
-          <span className="font-semibold">10,000 influencers</span> with brands.{" "}
-          <br />- Completed more than{" "}
-          <span className="font-semibold">200 campaigns</span> achieving{" "}
-          <span className="font-semibold">50M+ audience reach</span>. <br />-
-          Built long-term partnerships with over{" "}
-          <span className="font-semibold">500 brands</span> across multiple
-          sectors. <br />- Recognized as a trusted platform for delivering
-          creative, measurable, and scalable influencer campaigns.
+          <span className="font-semibold">10,000 influencers</span> with brands,
+          providing them with platforms to express creativity while delivering
+          real impact for businesses. <br />- Completed more than{" "}
+          <span className="font-semibold">200 campaigns</span> across diverse
+          industries, achieving an impressive{" "}
+          <span className="font-semibold">50M+ audience reach</span> worldwide.{" "}
+          <br />- Built long-term partnerships with over{" "}
+          <span className="font-semibold">500 brands</span> including startups,
+          SMEs, and Fortune 500 companies, driving measurable ROI. <br />-
+          Recognized as a reliable, innovative, and result-oriented platform
+          that empowers creators and enables brands to achieve digital success
+          at scale.
         </Section>
 
         {/* Closing Statement */}
@@ -170,8 +189,11 @@ const AboutUs = () => {
               The Influencer Network
             </span>{" "}
             continues to redefine how brands engage with audiences in the
-            digital era. Partner with us to amplify your brand story with
-            creativity, authenticity, and measurable impact.
+            digital era. By merging creativity, data, and strategy, we help
+            brands stand out in the cluttered digital landscape. Partner with us
+            to tell your story in a way that feels personal, impactful, and
+            unforgettable — because every brand has a voice, and we ensure that
+            voice is heard loud and clear.
           </p>
         </div>
       </div>
