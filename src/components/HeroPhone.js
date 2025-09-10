@@ -5,7 +5,6 @@ export default function HeroPhone() {
     <div className="relative flex justify-center items-center md:justify-end">
       {/* Orbiting Balls */}
       <div className="absolute w-[260px] h-[500px] sm:w-[340px] sm:h-[600px] lg:w-[420px] lg:h-[680px] flex justify-center items-center z-0">
-        
         {/* Orbit 1 */}
         <div className="absolute w-[200px] h-[400px] sm:w-[280px] sm:h-[520px] lg:w-[330px] lg:h-[610px] rounded-full animate-spin-slow">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-red-500"></div>
@@ -55,13 +54,14 @@ export default function HeroPhone() {
       {/* Phone Frame */}
       <div className="relative w-[200px] h-[420px] sm:w-[240px] sm:h-[500px] lg:w-[280px] lg:h-[560px] rounded-[2rem] shadow-2xl bg-black flex items-center justify-center z-10">
         <div className="relative w-[190px] h-[410px] sm:w-[230px] sm:h-[490px] lg:w-[270px] lg:h-[550px] rounded-[1.8rem] border-[4px] sm:border-[5px] lg:border-[6px] border-gray-900 overflow-hidden bg-black">
-          {/* Influencer Ad GIF */}
-          <Image
-            src="/influencer3.webp"
-            alt="Influencer Ad"
-            fill
-            className="object-cover"
-            unoptimized
+          {/* Influencer Ad Video */}
+          <video
+            src="/Videos/video1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
           />
 
           {/* iPhone notch */}

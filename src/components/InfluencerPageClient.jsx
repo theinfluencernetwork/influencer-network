@@ -4,60 +4,60 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
 import Marquee from "@/components/Marquee";
-
+import Link from "next/link";
 
 const influencers = [
   {
-    id:101,
+    id: 101,
     name: "Avneet Kaur",
     followers: "30M",
     img: "influencers/avneet.jpeg",
     insta: "https://www.instagram.com/avneetkaur_13/",
   },
   {
-    id:102,
+    id: 102,
     name: "Barkha Singh",
     followers: "3M",
     img: "influencers/barksha.jpeg",
     insta: "https://www.instagram.com/barkhasingh0308/",
   },
   {
-    id:103,
+    id: 103,
     name: "Curly Tales",
     followers: "1.2M",
     img: "influencers/curly.jpeg",
     insta: "https://www.instagram.com/curly.tales/",
   },
   {
-    id:104,
+    id: 104,
     name: "Ishita Pundeer",
     followers: "2M",
     img: "influencers/isha.jpeg",
     insta: "https://www.instagram.com/its_me_isha39/",
   },
   {
-    id:105,
+    id: 105,
     name: "Adarsh Singh",
     followers: "500K",
     img: "influencers/adarsh.jpeg",
     insta: "https://www.instagram.com/adarshuc/",
   },
   {
-    id:106,
+    id: 106,
     name: "CarryMinati",
     followers: "20M",
     img: "influencers/carryminati.jpeg",
     insta: "https://www.instagram.com/carryminati/",
   },
   {
-    id:107,
+    id: 107,
     name: "Harsh Beniwal",
     followers: "10M",
     img: "influencers/harsh.jpeg",
     insta: "https://www.instagram.com/harshbeniwal/",
   },
   {
-    id:108,
+    id: 108,
     name: "Abhishek Malhan",
     followers: "1M",
     img: "influencers/abhishek.jpeg",
@@ -100,14 +100,13 @@ const frames = [
   "/influencers/soniya.jpg",
   "/influencers/carryminati.jpeg",
   "/influencers/isha.jpeg",
-  
 ];
 
 // Expanded Influencers (10 categories × 9 influencers)
 const categoryInfluencers = [
   // FASHION
   {
-    id:101,
+    id: 101,
     name: "Sejal Kumar",
     category: "Fashion",
     followers: "812K",
@@ -115,7 +114,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/sejalkumar1195/",
   },
   {
-    id:102,
+    id: 102,
     name: "Komal Pandey",
     category: "Fashion",
     followers: "1.9M",
@@ -123,7 +122,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/komalpandeyofficial/",
   },
   {
-    id:103,
+    id: 103,
     name: "Kritika Khurana",
     category: "Fashion",
     followers: "1.9M",
@@ -131,7 +130,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/thatbohogirl/",
   },
   {
-    id:104,
+    id: 104,
     name: "Aashna Shroff",
     category: "Fashion",
     followers: "1.1M",
@@ -139,7 +138,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/aashnashroff/",
   },
   {
-    id:105,
+    id: 105,
     name: "Santoshi Shetty",
     category: "Fashion",
     followers: "705K",
@@ -147,7 +146,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/santoshishetty/",
   },
   {
-    id:106,
+    id: 106,
     name: "Juhi Godambe",
     category: "Fashion",
     followers: "543K",
@@ -155,7 +154,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/juhigodambe/",
   },
   {
-    id:107,
+    id: 107,
     name: "Riya Jain",
     category: "Fashion",
     followers: "420K",
@@ -163,7 +162,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/riyajain/",
   },
   {
-    id:108,
+    id: 108,
     name: "Masoom Minawala",
     category: "Fashion",
     followers: "1.3M",
@@ -171,7 +170,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/masoomminawala/",
   },
   {
-    id:109,
+    id: 109,
     name: "Aakriti Rana",
     category: "Fashion",
     followers: "1.1M",
@@ -179,7 +178,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/aakritiranaofficial/",
   },
   {
-    id:110,
+    id: 110,
     name: "Aarav Mehta",
     img: "/influencers/nancy.jpg",
     followers: "3M",
@@ -189,7 +188,7 @@ const categoryInfluencers = [
 
   // TRAVEL
   {
-    id:111,
+    id: 111,
     name: "Shivya Nath",
     category: "Travel",
     followers: "134K",
@@ -197,7 +196,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/shivya/",
   },
   {
-    id:112,
+    id: 112,
     name: "Travelling Desi",
     category: "Travel",
     followers: "2M",
@@ -205,7 +204,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/travellingdesi/",
   },
   {
-    id:113,
+    id: 113,
     name: "Varun Vagish",
     category: "Travel",
     followers: "1M",
@@ -213,7 +212,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/varunvagish/",
   },
   {
-    id:114,
+    id: 114,
     name: "Lost LeBlanc",
     category: "Travel",
     followers: "727K",
@@ -221,7 +220,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/lostleblanc/",
   },
   {
-    id:115,
+    id: 115,
     name: "Radhika Nomllers",
     category: "Travel",
     followers: "703K",
@@ -229,7 +228,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/radhika_nomllers/",
   },
   {
-    id:116,
+    id: 116,
     name: "Ankita Kumar",
     category: "Travel",
     followers: "553K",
@@ -237,7 +236,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/monkey.inc/",
   },
   {
-    id:117,
+    id: 117,
     name: "Travel with Neel",
     category: "Travel",
     followers: "150K",
@@ -245,7 +244,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/travelwithneel/",
   },
   {
-    id:118,
+    id: 118,
     name: "Shivam Gupta",
     category: "Travel",
     followers: "80.3K",
@@ -253,7 +252,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/casting_shivam/",
   },
   {
-    id:119,
+    id: 119,
     name: "Backpackers India",
     category: "Travel",
     followers: "40.8K",
@@ -261,7 +260,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/backpackerindian/",
   },
   {
-    id:120,
+    id: 120,
     name: "Mackenzie ",
     img: "/influencers/Mackenzie.jpg",
     followers: "210K",
@@ -271,7 +270,7 @@ const categoryInfluencers = [
 
   // FOOD
   {
-    id:121,
+    id: 121,
     name: "Kunal Kapur",
     category: "Food",
     followers: "3.8M",
@@ -279,7 +278,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/chefkunal/",
   },
   {
-    id:122,
+    id: 122,
     name: "Ranveer Brar",
     category: "Food",
     followers: "4.4M",
@@ -287,7 +286,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/ranveer.brar/",
   },
   {
-    id:123,
+    id: 123,
     name: "Sanjeev Kapoor",
     category: "Food",
     followers: "2.1M",
@@ -295,7 +294,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/sanjeevkapoor/",
   },
   {
-    id:124,
+    id: 124,
     name: "Archana Doshi",
     category: "Food",
     followers: "700K",
@@ -303,7 +302,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/archanaskitchen/",
   },
   {
-    id:125,
+    id: 125,
     name: "Pooja Dhingra",
     category: "Food",
     followers: "850K",
@@ -311,7 +310,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/poojadhingra/",
   },
   {
-    id:126,
+    id: 126,
     name: "The Bong Guy",
     category: "Food",
     followers: "600K",
@@ -319,7 +318,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/yourbongguy/",
   },
   {
-    id:127,
+    id: 127,
     name: "Nisha Madhulika",
     category: "Food",
     followers: "341M",
@@ -327,7 +326,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/nishamadhulika_cooks/",
   },
   {
-    id:128,
+    id: 128,
     name: "Hebbars Kitchen",
     category: "Food",
     followers: "3.7M",
@@ -335,7 +334,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/hebbars.kitchen/",
   },
   {
-    id:129,
+    id: 129,
     name: "Chetna Makan",
     category: "Food",
     followers: "695K",
@@ -343,7 +342,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/chetnamakan/",
   },
   {
-    id:130,
+    id: 130,
     name: "Kunal Sharma",
     img: "influencers/kunals.jpeg",
     followers: "180K",
@@ -353,7 +352,7 @@ const categoryInfluencers = [
 
   // BEAUTY
   {
-    id:131,
+    id: 131,
     name: "Malvika Sitlani",
     category: "Beauty",
     followers: "711K",
@@ -361,7 +360,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/malvikasitlaniofficial/",
   },
   {
-    id:132,
+    id: 132,
     name: "Neha Malhotra",
     img: "influencers/neha.jpeg",
     followers: "44.1K",
@@ -369,7 +368,7 @@ const categoryInfluencers = [
     insta: "https://instagram.com/nehaulicious",
   },
   {
-    id:133,
+    id: 133,
     name: "Debasree Banerjee",
     category: "Beauty",
     followers: "400K",
@@ -377,7 +376,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/debasreebanerjee/",
   },
   {
-    id:134,
+    id: 134,
     name: "Santoshi Shetty",
     category: "Beauty",
     followers: "720K",
@@ -385,7 +384,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/santoshishetty/",
   },
   {
-    id:135,
+    id: 135,
     name: "Ankita Chaturvedi",
     category: "Beauty",
     followers: "300K",
@@ -393,7 +392,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/coralistablog/",
   },
   {
-    id:136,
+    id: 136,
     name: "Komal Narang",
     category: "Beauty",
     followers: "500K",
@@ -401,7 +400,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/myhappinesz/",
   },
   {
-    id:137,
+    id: 137,
     name: "Shruti Arjun Anand",
     category: "Beauty",
     followers: "9M",
@@ -409,7 +408,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/shrutiarjunanand/",
   },
   {
-    id:138,
+    id: 138,
     name: "Jovita George",
     category: "Beauty",
     followers: "250K",
@@ -417,7 +416,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/mrjovitageorge/",
   },
   {
-    id:139,
+    id: 139,
     name: "Shreya Jain",
     category: "Beauty",
     followers: "430K",
@@ -425,7 +424,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/shreyajain26/",
   },
   {
-    id:140,
+    id: 140,
     name: "Ankush Bahuguna",
     category: "Beauty",
     followers: "1.2M",
@@ -435,7 +434,7 @@ const categoryInfluencers = [
 
   // FITNESS
   {
-    id:141,
+    id: 141,
     name: "Ranveer Allahbadia",
     category: "Fitness",
     followers: "2M",
@@ -443,7 +442,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/beerbiceps/",
   },
   {
-    id:142,
+    id: 142,
     name: "Yasmin Karachiwala",
     category: "Fitness",
     followers: "900K",
@@ -451,7 +450,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/yasminkarachiwala/",
   },
   {
-    id:143,
+    id: 143,
     name: "Rujuta Diwekar",
     category: "Fitness",
     followers: "1.8M",
@@ -459,7 +458,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/rujuta.diwekar/",
   },
   {
-    id:144,
+    id: 144,
     name: "Sapna Vyas",
     category: "Fitness",
     followers: "1.5M",
@@ -467,7 +466,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/coachsapna/",
   },
   {
-    id:145,
+    id: 145,
     name: "Pranit Shilimkar",
     category: "Fitness",
     followers: "600K",
@@ -475,7 +474,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/fitnesstalks_with_pranit/",
   },
   {
-    id:146,
+    id: 146,
     name: "Gaurav Taneja",
     category: "Fitness",
     followers: "3.5M",
@@ -483,7 +482,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/taneja.gaurav/",
   },
   {
-    id:147,
+    id: 147,
     name: "Anushka Rathod",
     category: "Fitness",
     followers: "1.2M",
@@ -491,7 +490,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/anushkarathod98/",
   },
   {
-    id:148,
+    id: 148,
     name: "Rajveer Shishodia",
     category: "Fitness",
     followers: "350K",
@@ -499,7 +498,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/rajveer_fitness_series/",
   },
   {
-    id:149,
+    id: 149,
     name: "Akshay Chopra",
     category: "Fitness",
     followers: "300K",
@@ -507,7 +506,7 @@ const categoryInfluencers = [
     insta: "https://www.instagram.com/akshaychopra_werstupid/",
   },
   {
-    id:150,
+    id: 150,
     name: "Soniya Singh Khatri",
     img: "/influencers/soniya.jpg",
     followers: "2.6M",
@@ -564,13 +563,13 @@ const categoryInfluencers = [
     img: "/influencers/gadgets.jpg",
     insta: "https://www.instagram.com/gadgets.360/",
   },
-//   {
-//     name: "Beebom",
-//     category: "Tech",
-//     followers: "1.1M",
-//     img: "/influencers/beebom.jpeg",
-//     insta: "https://www.instagram.com/beebomco/",
-//   },
+  //   {
+  //     name: "Beebom",
+  //     category: "Tech",
+  //     followers: "1.1M",
+  //     img: "/influencers/beebom.jpeg",
+  //     insta: "https://www.instagram.com/beebomco/",
+  //   },
   {
     id: 157,
     name: "C4ETech",
@@ -719,28 +718,28 @@ const categoryInfluencers = [
     img: "/influencers/beingmomma.avif",
     insta: "https://www.instagram.com/beingmomma/",
   },
-//   {
-//     id: 174,
-//     name: "The Champa Tree",
-//     category: "Parenting",
-//     followers: "200K",
-//     img: "/influencers/champa.jpeg",
-//     insta: "https://www.instagram.com/thechampatree/",
-//   },
-//   {
-//     name: "Mom Junction",
-//     category: "Parenting",
-//     followers: "1.1M",
-//     img: "/influencers/momjunction.jpeg",
-//     insta: "https://www.instagram.com/momjunctionofficial/",
-//   },
-//   {
-//     name: "Mothersgurukul",
-//     category: "Parenting",
-//     followers: "180K",
-//     img: "/influencers/mothersgurukul.jpeg",
-//     insta: "https://www.instagram.com/mothersgurukul/",
-//   },
+  //   {
+  //     id: 174,
+  //     name: "The Champa Tree",
+  //     category: "Parenting",
+  //     followers: "200K",
+  //     img: "/influencers/champa.jpeg",
+  //     insta: "https://www.instagram.com/thechampatree/",
+  //   },
+  //   {
+  //     name: "Mom Junction",
+  //     category: "Parenting",
+  //     followers: "1.1M",
+  //     img: "/influencers/momjunction.jpeg",
+  //     insta: "https://www.instagram.com/momjunctionofficial/",
+  //   },
+  //   {
+  //     name: "Mothersgurukul",
+  //     category: "Parenting",
+  //     followers: "180K",
+  //     img: "/influencers/mothersgurukul.jpeg",
+  //     insta: "https://www.instagram.com/mothersgurukul/",
+  //   },
 
   // FINANCE
   {
@@ -807,14 +806,14 @@ const categoryInfluencers = [
     img: "/influencers/mohit.jpeg",
     insta: "https://www.instagram.com/camohittandon/",
   },
-//   {
-    
-//     name: "CA Foundation Classes",
-//     category: "Finance",
-//     followers: "200K",
-//     img: "/influencers/cafoundation.jpeg",
-//     insta: "https://www.instagram.com/cafoundationclasses/",
-//   },
+  //   {
+
+  //     name: "CA Foundation Classes",
+  //     category: "Finance",
+  //     followers: "200K",
+  //     img: "/influencers/cafoundation.jpeg",
+  //     insta: "https://www.instagram.com/cafoundationclasses/",
+  //   },
 
   // GAMING
   {
@@ -926,9 +925,12 @@ export default function InfluencerPage() {
           <p className="text-gray-600 text-lg">
             Join <span className="text-red-600">100,000+</span> Indian Creators
           </p>
-          <button className="mt-10 px-6 py-3 bg-red-600 text-white rounded-xl shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
-            Sign Up Now
-          </button>
+
+          <Link href="/forms/influencer">
+            <button className="mt-10 px-6 py-3 bg-red-600 text-white rounded-xl shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
+              Join as Influencer
+            </button>
+          </Link>
         </motion.div>
 
         {/* Right Influencer Frames */}

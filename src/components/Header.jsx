@@ -14,9 +14,7 @@ export default function Header() {
       label: (
         <>
           {/* Emoji toggle effect */}
-          <span
-            className="inline-flex items-center justify-center w-8 h-8 rounded-full text-lg mr-1 shadow-md transition-transform duration-300 hover:scale-110 relative"
-          >
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full text-lg mr-1 shadow-md transition-transform duration-300 hover:scale-110 relative">
             <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-100 hover:opacity-0">
               🧔🏻
             </span>
@@ -29,19 +27,11 @@ export default function Header() {
       ),
     },
     {
-      href: "/live-campaigns",
+      href: "/campaigns",
       label: (
         <>
-          {/* Bright glowing LIVE icon */}
-          <span className="relative inline-flex w-6 h-6 mr-1">
-            {/* Glowing pulse effect */}
-            <span className="absolute inset-0 bg-red-500 rounded-full animate-pulse blur-sm"></span>
-            {/* Solid red circle with white dot */}
-            <span className="relative w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
-              ●
-            </span>
-          </span>
-          LIVE Campaigns!
+          <span className="mr-1">💼</span>
+          Our Campaigns!
         </>
       ),
     },

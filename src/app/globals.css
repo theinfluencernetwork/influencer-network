@@ -83,3 +83,45 @@ body {
 .animate-spin-slower { animation: spin-slower 35s linear infinite; }
 .animate-spin-reverse-fast { animation: spin-reverse-fast 10s linear infinite; }
 
+@keyframes rocketLeftToRight {
+  0% {
+    transform: translateX(-10vw) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(50vw) translateY(-10vh) rotate(45deg);
+  }
+  100% {
+    transform: translateX(110vw) translateY(0) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.rocket {
+  display: inline-block;
+  font-size: 2.5rem;
+  transition: transform 0.3s;
+}
+
+.rocket-fly {
+  position: fixed; /* fly across the viewport */
+  top: 20%;
+  left: 0;
+  z-index: 9999;
+  animation: rocketLeftToRight 4s ease-in-out forwards;
+  pointer-events: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}

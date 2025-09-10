@@ -1,8 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";   // ✅ import Next.js Script
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast"; //  import Toaster
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +26,14 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme="light">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
+
+        {/* Add Toaster here for toast notifications */}
+        <Toaster position="top-center" reverseOrder={false} />
+
         {children}
         <Footer />
 
-        {/* ✅ Instagram Embed Script */}
+        {/* Instagram Embed Script */}
         <Script
           src="https://www.instagram.com/embed.js"
           strategy="lazyOnload"
