@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 const cities = [
   { name: "Delhi", influencers: "500+", img: "/Cities/Delhi.jpg" },
   { name: "Mumbai", influencers: "1000+", img: "/Cities/Mumbai.jpg" },
-  { name: "Bengaluru", influencers: "800+", img: "/Cities/Banglore.jpg" },
+  { name: "Bengaluru", influencers: "800+", img: "/Cities/Bengaluru.jpg" },
   { name: "Patna", influencers: "1500+", img: "/Cities/Patna.jpg" },
   { name: "Varanasi", influencers: "1500+", img: "/Cities/Varanasi.jpg" },
   { name: "Hyderabad", influencers: "1200+", img: "/Cities/Hyderabad.jpg" },
