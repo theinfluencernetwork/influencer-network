@@ -33,33 +33,33 @@ function ServiceCard({ title, desc, Icon }) {
 export default function Services() {
   const services = [
     {
-      title: "Influencer Matching",
-      desc: "We connect your brand with the perfect influencers that align with your values and target audience.",
+      title: "Influencer Connect",
+      desc: "Find influencers who truly fit your brand.",
       Icon: Users,
     },
     {
-      title: "Campaign Strategy",
-      desc: "Our experts develop comprehensive strategies to maximize the impact of your influencer marketing campaigns.",
+      title: "Campaign Planning",
+      desc: "Ideas that work, results that last.",
       Icon: Briefcase,
     },
     {
-      title: "Content Creation",
-      desc: "We help craft compelling content guidelines that ensure authentic brand representation.",
+      title: "Creative Content",
+      desc: "Stories that people love to watch and share.",
       Icon: FileText,
     },
     {
-      title: "Campaign Management",
-      desc: "From initial outreach to final reporting, we manage the entire campaign process for seamless execution.",
+      title: "End-to-End Handling",
+      desc: "We manage everything from start to finish.",
       Icon: Layers,
     },
     {
-      title: "Performance Analytics",
-      desc: "Get detailed reports and insights on your campaign performance with actionable recommendations.",
+      title: "Real-Time Results",
+      desc: " Track reach, clicks, and ROI instantly.",
       Icon: BarChart3,
     },
     {
-      title: "Long-term Partnerships",
-      desc: "Develop ongoing relationships with influencers who become authentic ambassadors for your brand.",
+      title: "Stronger Bonds",
+      desc: "Turn one campaign into lasting partnerships.",
       Icon: Handshake,
     },
   ];

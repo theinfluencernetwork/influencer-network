@@ -39,7 +39,9 @@ export default function ContactPage() {
       }
 
       if (res.ok) {
-        toast.success(`Message submitted successfully as ${formType}! 🎉`, { duration: 3000 });
+        toast.success(`Message submitted successfully as ${formType}! 🎉`, {
+          duration: 3000,
+        });
         formRef.current.reset(); // Use ref to reset form
         setTimeout(() => router.push("/"), 2000);
       } else {
@@ -55,8 +57,25 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-16">
-      {/* Title */}
+      {/* NEW Heading + Subheading */}
       <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="mb-10 text-center"
+      >
+        <h2 className="text-3xl md:text-4xl font-extrabold text-red-600">
+          Let’s Connect
+        </h2>
+        <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+          Want to take your brand to the next level with influencer marketing
+          that truly works? Reach out today and let’s craft your perfect
+          campaign.
+        </p>
+      </motion.div>
+
+      {/* Title */}
+      {/* <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -67,7 +86,7 @@ export default function ContactPage() {
         <p className="mt-2 text-center text-gray-500">
           Ready to elevate your brand? Tell us about your campaign.
         </p>
-      </motion.div>
+      </motion.div> */}
 
       {/* Card Section */}
       <div className="mt-12 grid md:grid-cols-2 gap-12 items-stretch">
@@ -122,7 +141,9 @@ export default function ContactPage() {
                 <input name="phone" placeholder="Phone Number" className={input} />
                 <input name="email" placeholder="Email Address" className={input} />
                 <textarea name="message" rows={4} placeholder="Message" className={input} />
-                <button type="submit" className={btn}>Submit as Brand</button>
+                <button type="submit" className={btn}>
+                  Submit as Brand
+                </button>
               </motion.form>
             ) : (
               <motion.form
@@ -139,24 +160,49 @@ export default function ContactPage() {
                 <input name="socialLink" placeholder="Social Media Link" className={input} />
                 <input name="phone" placeholder="Phone Number" className={input} />
                 <input name="email" placeholder="Email Address" className={input} />
-                <button type="submit" className={btn}>Get Sponsorship</button>
+                <button type="submit" className={btn}>
+                  Get Sponsorship
+                </button>
               </motion.form>
             )}
           </AnimatePresence>
 
           {/* WhatsApp QR + Arrow */}
-          <motion.div className="mt-6 flex items-center gap-4" whileHover={{ scale: 1.1, rotate: 2 }}>
-            <Image src="/WhatsappQR.jpg" alt="WhatsApp QR" width={100} height={100} className="rounded-lg border shadow-md" />
-            <motion.div animate={{ x: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 1.5 }} className="text-green-400 font-medium">
+          <motion.div
+            className="mt-6 flex items-center gap-4"
+            whileHover={{ scale: 1.1, rotate: 2 }}
+          >
+            <Image
+              src="/WhatsappQR.jpg"
+              alt="WhatsApp QR"
+              width={100}
+              height={100}
+              className="rounded-lg border shadow-md"
+            />
+            <motion.div
+              animate={{ x: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+              className="text-green-400 font-medium"
+            >
               ← Scan the QR to chat with us!
             </motion.div>
           </motion.div>
         </motion.div>
 
         {/* Right Side */}
-        <motion.div className="relative flex justify-center items-stretch" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>
+        <motion.div
+          className="relative flex justify-center items-stretch"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+        >
           <div className="w-full max-w-[320px] aspect-[9/19] h-full">
-            <Image src="/Contact.jpg" alt="Chat Preview" fill className="rounded-lg object-contain drop-shadow-2xl" />
+            <Image
+              src="/Contact.jpg"
+              alt="Chat Preview"
+              fill
+              className="rounded-lg object-contain drop-shadow-2xl"
+            />
           </div>
         </motion.div>
       </div>
@@ -172,5 +218,7 @@ export default function ContactPage() {
   );
 }
 
-const input = "rounded-lg border border-gray-300 bg-white/90 text-gray-900 px-4 py-2 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-red-400 shadow-sm transition";
-const btn = "rounded-lg bg-red-600 hover:bg-red-700 transition px-6 py-2.5 text-white font-semibold shadow-md hover:shadow-lg active:scale-95 w-max self-center";
+const input =
+  "rounded-lg border border-gray-300 bg-white/90 text-gray-900 px-4 py-2 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-red-400 shadow-sm transition";
+const btn =
+  "rounded-lg bg-red-600 hover:bg-red-700 transition px-6 py-2.5 text-white font-semibold shadow-md hover:shadow-lg active:scale-95 w-max self-center";

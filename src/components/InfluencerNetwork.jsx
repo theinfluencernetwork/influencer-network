@@ -4,12 +4,36 @@ import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const InfluencersNetwork = () => {
   const categories = [
-    { title: "Lifestyle", count: "2,500+ influencers" },
-    { title: "Beauty", count: "1,800+ influencers" },
-    { title: "Fashion", count: "2,200+ influencers" },
-    { title: "Tech", count: "1,000+ influencers" },
-    { title: "Food", count: "1,500+ influencers" },
-    { title: "Fitness", count: "1,000+ influencers" },
+    { 
+      title: "Lifestyle", 
+      count: "2,500+ influencers", 
+      sub: "Authentic content on daily life, travel, and home." 
+    },
+    { 
+      title: "Beauty", 
+      count: "1,800+ influencers", 
+      sub: "Experts showcasing products to engaged audiences." 
+    },
+    { 
+      title: "Fashion", 
+      count: "2,200+ influencers", 
+      sub: "Trendsetters creating compelling fashion content." 
+    },
+    { 
+      title: "Tech", 
+      count: "1,000+ influencers", 
+      sub: "Trusted voices delivering tech insights." 
+    },
+    { 
+      title: "Food", 
+      count: "1,500+ influencers", 
+      sub: "Culinary creators producing engaging food content." 
+    },
+    { 
+      title: "Fitness", 
+      count: "1,000+ influencers", 
+      sub: "Trainers and enthusiasts inspiring healthy habits." 
+    },
   ];
 
   return (
@@ -29,6 +53,7 @@ const InfluencersNetwork = () => {
           >
             <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
             <p className="text-gray-300">{item.count}</p>
+            <p className="mt-3 text-gray-400 text-sm">{item.sub}</p>
           </div>
         ))}
       </div>

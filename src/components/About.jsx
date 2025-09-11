@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import {
   FaInstagram,
   FaBullhorn,
@@ -73,21 +74,34 @@ const stats = [
 ];
 
 const AboutUs = () => {
+  // ✅ Precompute circles to fix hydration issue
+  const circles = useMemo(
+    () =>
+      [...Array(15)].map(() => ({
+        size: 20 + Math.random() * 50,
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        duration: 20 + Math.random() * 30,
+        delay: Math.random() * 10,
+      })),
+    []
+  );
+
   return (
     <section className="w-full min-h-screen relative overflow-hidden bg-gradient-to-b from-white via-red-50 to-white py-20">
       {/* Background Glowing Circles */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        {[...Array(15)].map((_, i) => (
+        {circles.map((c, i) => (
           <div
             key={i}
             className="absolute bg-pink-300 rounded-full opacity-20 blur-3xl animate-floating"
             style={{
-              width: `${20 + Math.random() * 50}px`,
-              height: `${20 + Math.random() * 50}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${20 + Math.random() * 30}s`,
-              animationDelay: `${Math.random() * 10}s`,
+              width: `${c.size}px`,
+              height: `${c.size}px`,
+              top: `${c.top}%`,
+              left: `${c.left}%`,
+              animationDuration: `${c.duration}s`,
+              animationDelay: `${c.delay}s`,
             }}
           ></div>
         ))}
@@ -102,34 +116,32 @@ const AboutUs = () => {
           <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             <span className="font-semibold">The Influencer Network</span> is
             India's premier platform connecting brands with top-tier creators.
-            We go beyond simple collaborations — our approach focuses on
-            building long-lasting relationships between brands and influencers
-            that feel authentic, purposeful, and impactful. Our team specializes
-            in designing data-driven campaigns that not only amplify brand
-            visibility but also foster genuine engagement and meaningful
-            conversations with audiences. <br />
-            Whether you are a growing startup seeking to create a strong market
-            entry or an established brand looking to refresh your digital
-            presence, our curated pool of influencers across multiple niches
-            ensures that your campaign finds the right voice and reaches the
-            right people.
+            Every brand has a story worth sharing. The magic happens when the
+            right influencer tells it in a way that makes people pause, relate,
+            and respond. The Influencer Network believes that influence isn’t
+            about numbers, it’s about trust, connection, and conversations that
+            last. Our mission is to help brands and influencers collaborate in
+            ways that feel authentic and make a real impact. From fashion and
+            beauty to tech, food, travel, and lifestyle, our influencer
+            community gives every idea the voice it deserves. We help brands
+            move beyond ads and step into culture, where influence feels
+            natural, not forced. Because when stories are told with the right
+            voice, they don’t just reach people. They move them.
           </p>
         </div>
 
-        {/* Stats Section */}
+        {/* ✅ Updated Stats Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-20 text-center">
           {stats.map((stat, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl shadow-2xl p-6 transform transition duration-500 relative overflow-hidden flex flex-col items-center justify-center hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+              className="bg-black text-white rounded-3xl shadow-2xl p-6 transform transition duration-500 relative overflow-hidden flex flex-col items-center justify-center hover:scale-105 hover:shadow-[0_10px_30px_rgba(255,255,255,0.4)]"
             >
-              <div className="text-red-800 text-3xl mb-2 transition-colors duration-300 hover:text-black-600">
+              <div className="text-red-500 text-3xl mb-2 transition-colors duration-300 hover:text-white">
                 {stat.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">
-                {stat.number}
-              </h3>
-              <p className="mt-1 text-gray-600 text-sm">{stat.label}</p>
+              <h3 className="text-2xl font-bold">{stat.number}</h3>
+              <p className="mt-1 text-gray-300 text-sm">{stat.label}</p>
             </div>
           ))}
         </div>
