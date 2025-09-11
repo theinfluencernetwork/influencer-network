@@ -6,7 +6,6 @@ import { FaPlay } from "react-icons/fa";
 import Marquee from "@/components/Marquee";
 import Link from "next/link";
 import { influencers , reels , frames , categoryInfluencers} from "@/data/influencers";
-import ReelGrid from "./ReelsGrid";
 import InfluencerGrid from "./influencersGrid";
 
 const categories = [
@@ -98,7 +97,31 @@ export default function InfluencerPage() {
           </h2>
         </div>
 
-        <ReelGrid reels={reels} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+          {reels.map((reel) => (
+            <motion.div
+              key={reel.id}
+              whileHover={{ scale: 1.05 }}
+              className="relative group cursor-pointer rounded-xl overflow-hidden shadow-xl"
+              onClick={() => setSelectedReel(reel)}
+            >
+              {/* Thumbnail Image */}
+              <img
+                src={reel.thumbnail}
+                alt={reel.brand}
+                className="object-cover w-full h-72"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition">
+                <FaPlay className="text-white text-4xl mb-2" />
+                <span className="bg-white text-gray-900 px-3 py-1 rounded-md text-sm font-semibold">
+                  {reel.brand}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* Video Modal */}

@@ -4,13 +4,15 @@ import Image from "next/image";
 export default function InfluencerGrid({ influencers }) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-      {influencers.map((inf) => (
+      {influencers.map((inf) => 
+      
+      (
         <div
           key={inf.id}
           className="relative group w-full h-64 rounded-xl overflow-hidden shadow-lg"
         >
-          {/* Optimized Image */}
-          <Image
+          {/* Optimized Image  but not working for Image tag only for img tag*/}
+          <img
             src={inf.img}
             alt={`Instagram profile of ${inf.name}, ${inf.category} influencer`}
             width={300}
