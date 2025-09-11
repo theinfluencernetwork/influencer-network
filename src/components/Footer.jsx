@@ -89,12 +89,12 @@ export default function Footer() {
         href="/contact"
         className="fixed bottom-6 right-6 flex items-center justify-center w-20 h-20 rounded-full bg-red-600 shadow-lg z-50 group"
       >
-        <PhoneCall size={32} className="text-white animate-ring z-10" />
-        <div className="absolute w-28 h-28 flex items-center justify-center">
+        <PhoneCall size={32} className="text-white animate-ring z-10 mr-1" />
+        {/* <div className="absolute w-28 h-28 flex items-center justify-center">
           <p className="animate-spin-slow text-[11px] text-gray-300 tracking-[3px]">
             • CONTACT NOW • CONTACT NOW • CONTACT NOW •
           </p>
-        </div>
+        </div> */}
         <span className="absolute inset-0 rounded-full border-4 border-red-400 opacity-60 animate-ping"></span>
       </Link>
 

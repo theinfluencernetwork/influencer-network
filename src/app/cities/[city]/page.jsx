@@ -9,9 +9,30 @@ import {
   MotionA,
 } from "@/components/ClientMotion";
 import FAQItem from "@/components/FAQitems";
+import { SITE_URL } from "@/config/site";
+export async function generateMetadata({ params }) {
+  const cityKey = params.city?.toLowerCase() || "kolkata";
+  const data = citiesData[cityKey] || citiesData.kolkata;
 
+  return {
+    title: `${data.hero.title} | Influencer Marketing in ${cityKey.charAt(0).toUpperCase() + cityKey.slice(1)}`,
+    description: data.hero.subtitle,
+    openGraph: {
+      title: data.hero.title,
+      description: data.hero.subtitle,
+      images: [data.hero.bgImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.hero.title,
+      description: data.hero.subtitle,
+      images: [data.hero.bgImage],
+    },
+    canonical: `${SITE_URL}/cities/${cityKey}`,
+  };
+}
 export default async function  CityPage({ params }) {
-  const { city } = await params; // ✅ await params
+  const { city } = await params;
   const cityKey = city?.toLowerCase();
   const data = citiesData[cityKey] || citiesData.kolkata; // fallback
 

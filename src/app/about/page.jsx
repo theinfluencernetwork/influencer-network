@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Influencer Network",
     description: "Connect influencers with brands instantly.",
-    // url: "https://yourdomain.com",
+    url: `${SITE_URL}/about`,
     // images: ["/og-image.png"], // put your image in /public
   },
 };
