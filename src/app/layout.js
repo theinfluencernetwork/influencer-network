@@ -24,7 +24,31 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <head>
+        {/* ✅ Structured Data for SEO (JSON-LD) */}
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Your Platform Name",
+              url: "https://theinfluencernetwork.in/",
+              logo: "https://theinfluencernetwork.in/logo.png",
+              sameAs: [
+                "https://www.linkedin.com/company/theinfluencernetworek",
+                "https://twitter.com/theinfluencernetwork.in",
+                "https://instagram.com/theinfluencernetwork.in",
+              ],
+            }),
+          }}
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <Header />
 
         {/* Add Toaster here for toast notifications */}

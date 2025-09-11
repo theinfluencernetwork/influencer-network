@@ -10,8 +10,9 @@ import {
 } from "@/components/ClientMotion";
 import FAQItem from "@/components/FAQitems";
 
-export default function CityPage({ params }) {
-  const cityKey = params.city?.toLowerCase();
+export default async function  CityPage({ params }) {
+  const { city } = await params; // ✅ await params
+  const cityKey = city?.toLowerCase();
   const data = citiesData[cityKey] || citiesData.kolkata; // fallback
 
   return (
