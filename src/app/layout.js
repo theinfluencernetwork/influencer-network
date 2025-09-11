@@ -20,7 +20,7 @@ export const metadata = {
   description:
     "Connect with 10,000+ creators. Run end-to-end influencer campaigns with strategy, execution, and analytics.",
     icons: {
-    icon: "/logo.svg",   // path to your logo in the public folder
+    icon: "/logo1.png",   // path to your logo in the public folder
   },
 };
 
