@@ -39,7 +39,7 @@ export default function InfluencerPage() {
             <span className="text-red-600">Brands</span>
           </h1>
           <p className="text-gray-600 text-lg">
-            Join <span className="text-red-600">100,000+</span> Indian Creators
+              <span className="text-red-600">100,000+</span> Influencers, One Network
           </p>
 
           <Link href="/forms/influencer">

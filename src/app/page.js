@@ -48,8 +48,8 @@ export default function Home() {
               Marketing
             </h1>
             <p className="text-muted text-base sm:text-lg">
-              Connect with over 10,000 influencers to reach millions of engaged
-              followers.
+              Collaborate with 10,000+ influencers and make your brand
+              impossible to ignore.
             </p>
             <div className="flex gap-3 flex-wrap relative" ref={dropdownRef}>
               {/* Get Started Button with Options */}
@@ -57,7 +57,7 @@ export default function Home() {
                 onClick={() => setShowOptions((prev) => !prev)}
                 className="rounded bg-primary px-5 py-3 text-primary-foreground hover:opacity-90 relative transition-all duration-300"
               >
-                Get Started
+                Let’s Go
               </button>
               {showOptions && (
                 <div
@@ -70,8 +70,8 @@ export default function Home() {
                     onClick={() => setShowOptions(false)}
                   >
                     <span className="mr-2 group-hover:hidden">👤</span>
-                    <span className="mr-2 hidden group-hover:inline">👩</span>
-                    I am a Creator
+                    <span className="mr-2 hidden group-hover:inline">👩</span>I
+                    am a Creator
                   </Link>
                   <Link
                     href="/campaigns"
@@ -109,7 +109,8 @@ export default function Home() {
       <section className="w-full px-4 py-16">
         <div className="mx-auto max-w-6xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold relative inline-block group cursor-pointer">
-            FIND <span className="text-red-600">INFLUENCERS</span> IN YOUR CITY
+            Your City’s , <span className="text-red-600">Influencers</span> just
+            a click away
             <span className="absolute left-0 -bottom-1 w-full h-1 bg-gradient-to-r from-black to-red-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full"></span>
           </h2>
           <div className="mt-8">
@@ -119,28 +120,43 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
+      {/* Stats Section */}
       <section className="w-full bg-black text-white">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center">
+            {/* Influencers */}
             <div className="flex flex-col items-center">
               <p className="text-4xl md:text-5xl font-extrabold text-red-500">
                 10,000+
               </p>
-              <p className="mt-2 text-lg text-white/80">Influencers</p>
+              <p className="mt-1 text-lg font-semibold text-white">
+                Influencers
+              </p>
+              <p className="mt-2 text-base text-gray-400">
+                Across all platforms
+              </p>
             </div>
 
+            {/* Brand Collaborations */}
             <div className="flex flex-col items-center">
               <p className="text-4xl md:text-5xl font-extrabold text-red-500">
                 500+
               </p>
-              <p className="mt-2 text-lg text-white/80">Brand Partnerships</p>
+              <p className="mt-1 text-lg font-semibold text-white">
+                Brand Collaborations
+              </p>
+              <p className="mt-2 text-base text-gray-400">Across industries</p>
             </div>
 
+            {/* Audience Reach */}
             <div className="flex flex-col items-center">
               <p className="text-4xl md:text-5xl font-extrabold text-red-500">
                 50M+
               </p>
-              <p className="mt-2 text-lg text-white/80">Audience Reach</p>
+              <p className="mt-1 text-lg font-semibold text-white">
+                Audience Reach
+              </p>
+              <p className="mt-2 text-base text-gray-400">Nationwide</p>
             </div>
           </div>
         </div>
@@ -162,7 +178,7 @@ export default function Home() {
       <section className="w-full px-4 pb-16">
         <div className="mx-auto max-w-6xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold relative inline-block group cursor-pointer">
-            TRUSTED BY <span className="text-red-600">BRANDS</span>
+             <span className="text-red-600">Brands</span>  Who Believe in Us!
             <span className="absolute left-0 -bottom-1 w-full h-1 bg-gradient-to-r from-black to-red-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full"></span>
           </h2>
           <div className="mt-6">

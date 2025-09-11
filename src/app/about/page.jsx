@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import { SITE_URL } from "@/config/site";
 export const metadata = {
   title: "Influencer Network - Connect with Top Brands",
   description: "The ultimate influencer-network platform for collaborations, brand deals, and partnerships.",
