@@ -19,6 +19,9 @@ export const metadata = {
   title: "Best Influencer Marketing Platform and Agency in India",
   description:
     "Connect with 10,000+ creators. Run end-to-end influencer campaigns with strategy, execution, and analytics.",
+    icons: {
+    icon: "/logo.svg",   // path to your logo in the public folder
+  },
 };
 
 export default function RootLayout({ children }) {
