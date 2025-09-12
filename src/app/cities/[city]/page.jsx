@@ -177,7 +177,7 @@ export default async function  CityPage({ params }) {
               >
                 {/* Icon + Info */}
                 
-                <div className="flex items-center mb-4">
+                <div className="lg:flex-row flex-col flex items-center mb-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-3 flex-shrink-0 border-2 border-white shadow-md transition-colors duration-300 group-hover:border-red-500">
                     <img
                       src={inf.img}
