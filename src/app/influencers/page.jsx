@@ -1,8 +1,8 @@
 
 import InfluencerPage from '@/components/InfluencerPageClient'
-import { SITE_URL } from '@/config/site';
 import { categoryInfluencers } from '@/data/influencers'
 // app/influencers/page.tsx
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata = {
   title: "Top Indian Influencers – Collaborate with Brands",
   description:

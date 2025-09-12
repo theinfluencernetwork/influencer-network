@@ -1,5 +1,5 @@
 import About from "@/components/About";
-import { SITE_URL } from "@/config/site";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata = {
   title: "Influencer Network - Connect with Top Brands",
   description: "The ultimate influencer-network platform for collaborations, brand deals, and partnerships.",

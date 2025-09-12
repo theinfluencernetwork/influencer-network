@@ -1,5 +1,5 @@
 // app/cities/[city]/page.jsx
-import Counter from "@/components/counter";
+import Counter from "@/components/Counter";
 import { citiesData } from "@/data/cities";
 import {
   MotionDiv,
@@ -9,7 +9,7 @@ import {
   MotionA,
 } from "@/components/ClientMotion";
 import FAQItem from "@/components/FAQitems";
-import { SITE_URL } from "@/config/site";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export async function generateMetadata({ params }) {
   const cityKey = params.city?.toLowerCase() || "kolkata";
   const data = citiesData[cityKey] || citiesData.kolkata;
