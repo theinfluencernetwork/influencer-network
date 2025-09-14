@@ -41,14 +41,14 @@ export default function Home() {
         <div className="mx-auto max-w-6xl min-h-[80vh] px-4 py-12 sm:py-20 flex flex-col gap-10 sm:flex-row sm:items-center">
           {/* Text content */}
           <div className="space-y-6 sm:w-1/2">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
               Amplify your <span className="text-red-600">Brand</span> through{" "}
               <span className="text-red-600">influencer</span>
               <br />
               Marketing
             </h1>
             <p className="text-muted text-base sm:text-lg">
-              Collaborate with 10,000+ influencers and make your brand
+              Collaborate with 100,000+ influencers and make your brand
               impossible to ignore.
             </p>
             <div className="flex gap-3 flex-wrap relative" ref={dropdownRef}>
@@ -127,7 +127,7 @@ export default function Home() {
             {/* Influencers */}
             <div className="flex flex-col items-center">
               <p className="text-4xl md:text-5xl font-extrabold text-red-500">
-                10,000+
+                100,000+
               </p>
               <p className="mt-1 text-lg font-semibold text-white">
                 Influencers

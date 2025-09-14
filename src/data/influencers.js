@@ -57,7 +57,7 @@ export const influencers = [
   },
 ];
 
-export const  reels = [
+export const reels = [
   {
     id: 1,
     videoUrl: "/Videos/reel1.mp4",
@@ -85,12 +85,13 @@ export const  reels = [
 ];
 
 export const frames = [
-  "/influencers/avneet.jpeg",
-  "/influencers/harsh.jpeg",
+  "/influencers/BB.avif",
   "/influencers/barksha.jpeg",
-  "/influencers/soniya.jpg",
-  "/influencers/carryminati.jpeg",
+  "/influencers/harsh.jpeg",
+
+  "/influencers/Raj.jpg",
   "/influencers/isha.jpeg",
+  "/influencers/carryminati.jpeg",
 ];
 export const categoryInfluencers = [
   // FASHION
@@ -545,7 +546,6 @@ export const categoryInfluencers = [
     insta: "https://www.instagram.com/techburner/",
   },
 
-  
   {
     id: 156,
     name: "C4ETech",
@@ -570,22 +570,22 @@ export const categoryInfluencers = [
     img: "/influencers/gyan.jpg",
     insta: "https://www.instagram.com/gyantherapy/",
   },
-    {
-      id: 159,
-      name: "Mohit Balani",
-      category: "Tech",
-      followers: "131K",
-      img: "/influencers/balani.jpg",
-      insta: "https://www.instagram.com/moh__balani/",
-    },
-      {
-      id: 160,
-      name: "Ansh Mehra",
-      category: "Tech",
-      followers: "238K",
-      img: "/influencers/ansh.jpg",
-      insta: "https://www.instagram.com/anshmehra.in/",
-    },
+  {
+    id: 159,
+    name: "Mohit Balani",
+    category: "Tech",
+    followers: "131K",
+    img: "/influencers/balani.jpg",
+    insta: "https://www.instagram.com/moh__balani/",
+  },
+  {
+    id: 160,
+    name: "Ansh Mehra",
+    category: "Tech",
+    followers: "238K",
+    img: "/influencers/ansh.jpg",
+    insta: "https://www.instagram.com/anshmehra.in/",
+  },
 
   // EDUTECH
   // {
@@ -710,38 +710,38 @@ export const categoryInfluencers = [
     img: "/influencers/beingamomstar.jpg",
     insta: "https://www.instagram.com/beingamomstar/",
   },
-    {
-      id: 167,
-      name: "Dadyslilgirl",
-      category: "Parenting",
-      followers: "92K",
-      img: "/influencers/dadyslilgirl.jpg",
-      insta: "https://www.instagram.com/dadys.lil.girl/",
-    },
-    {
-      id: 168,
-      name: "Alisha Capturing",
-      category: "Parenting",
-      followers: "67K",
-      img: "/influencers/alisha.jpg",
-      insta: "https://www.instagram.com/alisha_capturingmoments/",
-    },
-    {
-      id: 169,
-      name: "Mothers Hook",
-      category: "Parenting",
-      followers: "74K",
-      img: "/influencers/mothershook.jpg",
-      insta: "https://www.instagram.com/mothers_hook/",
-    },
-      {
-        id: 170,
-      name: "The Happie Soul",
-      category: "Parenting",
-      followers: "50K",
-      img: "/influencers/thehappiesoul.jpg",
-      insta: "https://www.instagram.com/the.happie.soul/",
-    },
+  {
+    id: 167,
+    name: "Dadyslilgirl",
+    category: "Parenting",
+    followers: "92K",
+    img: "/influencers/dadyslilgirl.jpg",
+    insta: "https://www.instagram.com/dadys.lil.girl/",
+  },
+  {
+    id: 168,
+    name: "Alisha Capturing",
+    category: "Parenting",
+    followers: "67K",
+    img: "/influencers/alisha.jpg",
+    insta: "https://www.instagram.com/alisha_capturingmoments/",
+  },
+  {
+    id: 169,
+    name: "Mothers Hook",
+    category: "Parenting",
+    followers: "74K",
+    img: "/influencers/mothershook.jpg",
+    insta: "https://www.instagram.com/mothers_hook/",
+  },
+  {
+    id: 170,
+    name: "The Happie Soul",
+    category: "Parenting",
+    followers: "50K",
+    img: "/influencers/thehappiesoul.jpg",
+    insta: "https://www.instagram.com/the.happie.soul/",
+  },
 
   // FINANCE
   {
@@ -808,22 +808,22 @@ export const categoryInfluencers = [
     img: "/influencers/mohit.jpeg",
     insta: "https://www.instagram.com/camohittandon/",
   },
-    {
-      id: 179,
-      name: "Diya bafna",
-      category: "Finance",
-      followers: "165K",
-      img: "/influencers/diya.jpg",
-      insta: "https://www.instagram.com/diya.bafnaa/",
-    },
-     {
-      id: 180,
-      name: "Sushant Bindal",
-      category: "Finance",
-      followers: "127K",
-      img: "/influencers/sushant.jpg",
-      insta: "https://www.instagram.com/sushantbindal/",
-    },
+  {
+    id: 179,
+    name: "Diya bafna",
+    category: "Finance",
+    followers: "165K",
+    img: "/influencers/diya.jpg",
+    insta: "https://www.instagram.com/diya.bafnaa/",
+  },
+  {
+    id: 180,
+    name: "Sushant Bindal",
+    category: "Finance",
+    followers: "127K",
+    img: "/influencers/sushant.jpg",
+    insta: "https://www.instagram.com/sushantbindal/",
+  },
 
   // GAMING
   {

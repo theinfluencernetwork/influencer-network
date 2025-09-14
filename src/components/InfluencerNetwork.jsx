@@ -80,7 +80,7 @@ const InfluencersNetwork = () => {
           <p className="font-semibold mt-2">LinkedIn</p>
         </a>
 
-        <a
+        {/* <a
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -88,7 +88,7 @@ const InfluencersNetwork = () => {
         >
           <FaTwitter className="text-4xl text-red-600 group-hover:scale-110 transition-transform duration-300" />
           <p className="font-semibold mt-2">Twitter</p>
-        </a>
+        </a> */}
       </div>
     </section>
   );

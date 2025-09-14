@@ -5,7 +5,12 @@ import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
 import Marquee from "@/components/Marquee";
 import Link from "next/link";
-import { influencers , reels , frames , categoryInfluencers} from "@/data/influencers";
+import {
+  influencers,
+  reels,
+  frames,
+  categoryInfluencers,
+} from "@/data/influencers";
 import InfluencerGrid from "./influencersGrid";
 
 const categories = [
@@ -34,12 +39,21 @@ export default function InfluencerPage() {
           transition={{ duration: 0.8 }}
           className="text-center md:text-left space-y-6 max-w-lg"
         >
-          <h1 className="text-5xl font-bold text-gray-900 leading-snug">
-            Collaborate with your <br /> favourite{" "}
-            <span className="text-red-600">Brands</span>
+          <h1
+            className="font-bold text-gray-900 leading-snug 
+               text-3xl sm:text-4xl md:text-5xl"
+          >
+            {/* First line - stays one line on desktop */}
+            <span className="block md:inline whitespace-normal md:whitespace-nowrap">
+              Your Gateway to <span className="text-red-600">Brands</span>
+            </span>
+            {/* Second line */}
+            <span className="block">Collaborations</span>
           </h1>
+
           <p className="text-gray-600 text-lg">
-              <span className="text-red-600">100,000+</span> Influencers, One Network
+            <span className="text-red-600">100,000+</span> Influencers, One
+            Network
           </p>
 
           <Link href="/forms/influencer">
@@ -93,7 +107,7 @@ export default function InfluencerPage() {
             after:content-[''] after:absolute after:w-0 after:h-[3px] after:bg-red-600 after:left-0 after:-bottom-2 
             after:transition-all after:duration-300 hover:after:w-full"
           >
-            Our Work – <span className="text-red-600">Influencer's</span> Reels
+            Our Work with <span className="text-red-600">Influencers</span>
           </h2>
         </div>
 

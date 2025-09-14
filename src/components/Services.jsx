@@ -1,6 +1,13 @@
 "use client";
 
-import { Briefcase, Users, FileText, BarChart3, Layers, Handshake } from "lucide-react";
+import {
+  Briefcase,
+  Users,
+  FileText,
+  BarChart3,
+  Layers,
+  Handshake,
+} from "lucide-react";
 
 function ServiceCard({ title, desc, Icon }) {
   return (
@@ -24,8 +31,10 @@ function ServiceCard({ title, desc, Icon }) {
       <p className="mt-2 text-sm text-gray-600">{desc}</p>
 
       {/* Hover border glow */}
-      <div className="absolute inset-0 rounded-2xl border-2 border-transparent 
-                      group-hover:border-red-500 transition-all duration-300 pointer-events-none"></div>
+      <div
+        className="absolute inset-0 rounded-2xl border-2 border-transparent 
+                      group-hover:border-red-500 transition-all duration-300 pointer-events-none"
+      ></div>
     </div>
   );
 }
@@ -66,7 +75,7 @@ export default function Services() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="text-3xl font-bold text-center">OUR SERVICES</h2>
+      <h2 className="text-3xl font-bold text-center">How We Help Brands Win</h2>
 
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (

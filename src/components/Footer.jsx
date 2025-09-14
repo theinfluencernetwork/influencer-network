@@ -16,12 +16,17 @@ export default function Footer() {
   return (
     <footer className="relative bg-black text-white mt-24 border-t border-red-600">
       <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center sm:text-left">
-        
-        {/* Left Section - Logo Text & Tagline */}
+        {/* Left Section - Logo Image & Tagline */}
         <div className="space-y-4">
-          <div className="font-extrabold text-3xl leading-tight tracking-wide">
-            <span className="block text-white">THE</span>
-            <span className="block text-white mt-1">INFLUENCER NETWORK</span>
+          <div
+            className="cursor-pointer inline-block"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <img
+              src="/logofooter.png" 
+              alt="The Influencer Network Logo"
+              className="h-16 mx-auto sm:mx-0"
+            />
           </div>
           <p className="text-sm text-gray-300 max-w-xs mx-auto sm:mx-0">
             Amplify your brand through strategic influencer marketing.
@@ -32,11 +37,21 @@ export default function Footer() {
         <nav className="space-y-3">
           <p className="font-semibold text-red-400">Quick Links</p>
           <div className="flex flex-col gap-2">
-            <Link href="/about" className="hover:text-red-400 transition">About</Link>
-            <Link href="/services" className="hover:text-red-400 transition">Services</Link>
-            <Link href="/influencers" className="hover:text-red-400 transition">Influencers</Link>
-            <Link href="/brands" className="hover:text-red-400 transition">Brands</Link>
-            <Link href="/contact" className="hover:text-red-400 transition">Contact</Link>
+            <Link href="/about" className="hover:text-red-400 transition">
+              About
+            </Link>
+            <Link href="/services" className="hover:text-red-400 transition">
+              Services
+            </Link>
+            <Link href="/influencers" className="hover:text-red-400 transition">
+              Influencers
+            </Link>
+            <Link href="/campaigns" className="hover:text-red-400 transition">
+              Brands
+            </Link>
+            <Link href="/contact" className="hover:text-red-400 transition">
+              Contact
+            </Link>
           </div>
         </nav>
 
@@ -49,13 +64,19 @@ export default function Footer() {
           </div>
           <div className="flex justify-center sm:justify-start items-center gap-2">
             <Mail size={18} className="text-red-400" />
-            <a href="mailto:support@influencernetwork.in" className="hover:text-red-400 transition">
+            <a
+              href="mailto:support@influencernetwork.in"
+              className="hover:text-red-400 transition"
+            >
               support@influencernetwork.in
             </a>
           </div>
           <div className="flex justify-center sm:justify-start items-center gap-2">
             <Mail size={18} className="text-red-400" />
-            <a href="mailto:collab@influencernetwork.in" className="hover:text-red-400 transition">
+            <a
+              href="mailto:collab@influencernetwork.in"
+              className="hover:text-red-400 transition"
+            >
               collab@influencernetwork.in
             </a>
           </div>
@@ -68,16 +89,36 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-start gap-4 mt-4">
-            <a href="https://www.facebook.com/profile.php?id=61574455124778" target="_blank" rel="noopener noreferrer" className="social-icon">
+            {/* <a
+              href="https://www.facebook.com/profile.php?id=61574455124778"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
               <Facebook size={20} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            </a> */}
+            {/* <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
               <Twitter size={20} />
-            </a>
-            <a href="https://www.instagram.com/theinfluencernetwork.in?igsh=cm9lczFvYWN3Zng0" target="_blank" rel="noopener noreferrer" className="social-icon">
+            </a> */}
+            <a
+              href="https://www.instagram.com/theinfluencernetwork.in?igsh=cm9lczFvYWN3Zng0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
               <Instagram size={20} />
             </a>
-            <a href="https://www.linkedin.com/company/theinfluencernetworek/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a
+              href="https://www.linkedin.com/company/theinfluencernetworek/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
               <Linkedin size={20} />
             </a>
           </div>
@@ -106,20 +147,41 @@ export default function Footer() {
       {/* Tailwind Animations */}
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-6px); }
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-6px);
+          }
         }
-        .animate-bounce-slow { animation: float 3s ease-in-out infinite; }
+        .animate-bounce-slow {
+          animation: float 3s ease-in-out infinite;
+        }
 
         @keyframes ring {
-          0% { transform: rotate(0deg) scale(1); }
-          25% { transform: rotate(-10deg) scale(1.1); }
-          50% { transform: rotate(10deg) scale(1.1); }
-          75% { transform: rotate(-10deg) scale(1.05); }
-          100% { transform: rotate(0deg) scale(1); }
+          0% {
+            transform: rotate(0deg) scale(1);
+          }
+          25% {
+            transform: rotate(-10deg) scale(1.1);
+          }
+          50% {
+            transform: rotate(10deg) scale(1.1);
+          }
+          75% {
+            transform: rotate(-10deg) scale(1.05);
+          }
+          100% {
+            transform: rotate(0deg) scale(1);
+          }
         }
-        .animate-ring { animation: ring 1.5s infinite ease-in-out; }
-        .animate-spin-slow { animation: spin 12s linear infinite; }
+        .animate-ring {
+          animation: ring 1.5s infinite ease-in-out;
+        }
+        .animate-spin-slow {
+          animation: spin 12s linear infinite;
+        }
 
         .social-icon {
           display: flex;
