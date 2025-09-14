@@ -66,9 +66,9 @@ export const reels = [
   },
   {
     id: 2,
-    videoUrl: "/Videos/reel2.mp4",
-    brand: "Hospital",
-    thumbnail: "/thumbnails/reel2.jpg",
+    videoUrl: "/Videos/reel5.mp4",
+    brand: "The Sleep Company",
+    thumbnail: "/thumbnails/reel5.jpg",
   },
   {
     id: 3,
@@ -78,9 +78,9 @@ export const reels = [
   },
   {
     id: 4,
-    videoUrl: "/Videos/reel4.mp4",
-    brand: "The Sleep Company",
-    thumbnail: "/thumbnails/reel4.jpg",
+    videoUrl: "/Videos/reel6.mp4",
+    brand: "Vivo Campaign - The Aditya vision",
+    thumbnail: "/thumbnails/reel6.jpg",
   },
 ];
 
